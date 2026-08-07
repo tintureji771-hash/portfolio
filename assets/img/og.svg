@@ -1,26 +1,59 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
-    <radialGradient id="glow" cx="0.5" cy="0.1" r="0.8">
-      <stop offset="0" stop-color="#c8f169" stop-opacity="0.18"/>
-      <stop offset="1" stop-color="#0b0b0c" stop-opacity="0"/>
+    <radialGradient id="glow" cx="0.5" cy="0.05" r="0.85">
+      <stop offset="0" stop-color="#f0a32c" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#f7f2e9" stop-opacity="0"/>
     </radialGradient>
+    <linearGradient id="pg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd28a"/><stop offset="1" stop-color="#f0a32c"/>
+    </linearGradient>
   </defs>
-  <rect width="1200" height="630" fill="#0b0b0c"/>
+
+  <rect width="1200" height="630" fill="#f7f2e9"/>
   <rect width="1200" height="630" fill="url(#glow)"/>
 
-  <rect x="80" y="76" width="14" height="14" rx="2" fill="#c8f169" transform="rotate(45 87 83)"/>
-  <text x="112" y="94" font-family="Times New Roman, serif" font-size="34" fill="#efebe4">Noa Vega</text>
-
-  <text x="80" y="320" font-family="Times New Roman, serif" font-size="106" fill="#efebe4">Frames that refuse</text>
-  <text x="80" y="424" font-family="Times New Roman, serif" font-size="106" fill="#efebe4">to sit</text>
-  <text x="292" y="424" font-family="Times New Roman, serif" font-size="106" font-style="italic" fill="#c8f169">still.</text>
-
-  <g transform="translate(1010 300)">
-    <circle r="72" fill="none" stroke="#efebe4" stroke-width="2" opacity="0.35"/>
-    <circle r="46" fill="#c8f169"/>
-    <path d="M-12 -18 L20 0 L-12 18 Z" fill="#0b0b0c"/>
+  <!-- brand pill -->
+  <g>
+    <rect x="72" y="56" width="238" height="56" rx="28" fill="#ffffff" stroke="#e6ddcd"/>
+    <circle cx="104" cy="84" r="18" fill="#f0a32c"/>
+    <text x="104" y="90" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif"
+          font-size="15" font-weight="800" fill="#1b1815">NV</text>
+    <text x="134" y="91" font-family="Segoe UI, Helvetica, Arial, sans-serif"
+          font-size="21" font-weight="800" fill="#171512">Noa Vega</text>
   </g>
 
-  <rect x="80" y="514" width="1040" height="1" fill="#26262a"/>
-  <text x="80" y="562" font-family="Helvetica, Arial, sans-serif" font-size="21" letter-spacing="3" fill="#7d7b76">MOTION DESIGNER &amp; ANIMATOR — 3D · KINETIC TYPE · TITLES</text>
+  <!-- headline -->
+  <text x="72" y="290" font-family="Segoe UI, Helvetica, Arial, sans-serif"
+        font-size="96" font-weight="800" letter-spacing="-4" fill="#171512">I'm Noa Vega</text>
+  <text x="72" y="352" font-family="Segoe UI, Helvetica, Arial, sans-serif"
+        font-size="27" font-weight="600" fill="#4a443c">Motion Designer &amp; Animator — Barcelona</text>
+
+  <!-- chips -->
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="19" font-weight="600">
+    <rect x="72"  y="404" width="176" height="50" rx="25" fill="#ffffff" stroke="#e6ddcd"/>
+    <circle cx="102" cy="429" r="6" fill="#f0a32c"/>
+    <text x="118" y="436" fill="#4a443c">3D &amp; CGI</text>
+
+    <rect x="262" y="404" width="216" height="50" rx="25" fill="#ffffff" stroke="#e6ddcd"/>
+    <circle cx="292" cy="429" r="6" fill="#f0a32c"/>
+    <text x="308" y="436" fill="#4a443c">Kinetic Type</text>
+
+    <rect x="492" y="404" width="196" height="50" rx="25" fill="#ffffff" stroke="#e6ddcd"/>
+    <circle cx="522" cy="429" r="6" fill="#f0a32c"/>
+    <text x="538" y="436" fill="#4a443c">Title Design</text>
+  </g>
+
+  <!-- portrait card -->
+  <g>
+    <path d="M830 150 h250 a44 44 0 0 1 44 44 v206 a169 169 0 0 1 -338 0 v-206 a44 44 0 0 1 44 -44 z" fill="url(#pg)"/>
+    <circle cx="955" cy="300" r="72" fill="#1b1815" opacity="0.9"/>
+    <path d="M853 520c0-56 46-102 102-102s102 46 102 102z" fill="#1b1815" opacity="0.9"/>
+  </g>
+
+  <!-- rating strip -->
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif">
+    <text x="72" y="556" font-size="20" font-weight="700" fill="#171512">300+ Reviews</text>
+    <text x="222" y="556" font-size="20" fill="#f0a32c">★★★★★</text>
+    <text x="352" y="556" font-size="20" fill="#7a736a">4.9 of 5 — studios &amp; brands</text>
+  </g>
 </svg>

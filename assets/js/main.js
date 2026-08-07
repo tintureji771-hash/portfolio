@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Unfold — interaction layer
+   Noa Vega — interaction layer
    Vanilla ES2020. No dependencies. Every module fails soft.
    ========================================================================== */
 (function () {
@@ -63,13 +63,13 @@
     var stored = null;
     try { stored = localStorage.getItem('unfold-theme'); } catch (e) { /* private mode */ }
 
-    var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-    apply(stored || (prefersLight ? 'light' : 'dark'));
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    apply(stored || (prefersDark ? 'dark' : 'light'));
 
     function apply(theme) {
       root.setAttribute('data-theme', theme);
       var meta = $('meta[name="theme-color"]');
-      if (meta) meta.setAttribute('content', theme === 'light' ? '#f2efe9' : '#0b0b0c');
+      if (meta) meta.setAttribute('content', theme === 'dark' ? '#121110' : '#f7f2e9');
       if (icon) icon.querySelector('path').setAttribute('d', theme === 'light' ? SUN : MOON);
       if (btn) {
         btn.setAttribute('aria-label',
@@ -86,7 +86,7 @@
   }
 
   /* ------------------------------------------------------------------ *
-   * Header — hide on scroll down, show on scroll up, solidify past hero.
+   * Header — the pill hides on scroll down, returns on scroll up.
    * ------------------------------------------------------------------ */
   function initHeader() {
     var header = $('#header');
@@ -97,7 +97,6 @@
 
     function update() {
       var y = window.scrollY;
-      header.classList.toggle('is-stuck', y > 40);
       // Only hide once well past the fold, and never while the menu is open.
       var menuOpen = document.body.classList.contains('is-locked');
       header.classList.toggle('is-hidden', !menuOpen && y > 400 && y > last);
@@ -364,34 +363,6 @@
   }
 
   /* ------------------------------------------------------------------ *
-   * Toolkit bars — fill on first scroll into view.
-   * ------------------------------------------------------------------ */
-  function initToolkit() {
-    var fills = $$('[data-fill]');
-    if (!fills.length) return;
-
-    function set(el) { el.style.width = (parseInt(el.getAttribute('data-fill'), 10) || 0) + '%'; }
-
-    if (reduceMotion || !('IntersectionObserver' in window)) {
-      fills.forEach(set);
-      return;
-    }
-
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        set(entry.target);
-        io.unobserve(entry.target);
-      });
-    }, { threshold: 0.4 });
-
-    fills.forEach(function (el, i) {
-      el.style.setProperty('--delay', (i * 70) + 'ms');
-      io.observe(el);
-    });
-  }
-
-  /* ------------------------------------------------------------------ *
    * Showreel modal — focus-trapped, Escape to close, embed injected on
    * open and torn down on close so the video can't keep playing.
    * ------------------------------------------------------------------ */
@@ -537,7 +508,7 @@
 
     [initPreloader, initTheme, initHeader, initProgress, initMenu, initReveal,
      initCounters, initMarquee, initServices, initFilters, initQuotes,
-     initToolkit, initReel, initCursor, initScrollSpy].forEach(function (fn) {
+     initReel, initCursor, initScrollSpy].forEach(function (fn) {
       try { fn(); } catch (err) {
         // One broken module must never take the page down.
         if (window.console) console.error('[unfold]', fn.name, err);

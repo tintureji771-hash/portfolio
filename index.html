@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Noa Vega — Motion Designer &amp; Animator</title>
-<meta name="description" content="Noa Vega is a freelance motion designer and animator working in 3D, kinetic type and title design for brands, studios and record labels.">
-<meta name="theme-color" content="#0b0b0c">
-<meta name="color-scheme" content="dark light">
+<meta name="description" content="Noa Vega is an award-winning freelance motion designer and animator working in 3D, kinetic type and title design for brands, studios and record labels.">
+<meta name="theme-color" content="#f7f2e9">
+<meta name="color-scheme" content="light dark">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Noa Vega — Motion Designer &amp; Animator">
-<meta property="og:description" content="Freelance motion designer working in 3D, kinetic type and title design.">
+<meta property="og:description" content="Award-winning freelance motion designer working in 3D, kinetic type and title design.">
 <meta property="og:image" content="assets/img/og.svg">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Caveat:wght@600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -36,32 +36,33 @@
 <div class="cursor" id="cursor" aria-hidden="true"></div>
 <div class="progress" id="progress" aria-hidden="true"></div>
 
-<!-- Header ------------------------------------------------------------- -->
+<!-- Floating pill nav -------------------------------------------------- -->
 <header class="header" id="header">
-  <div class="shell header__bar">
+  <div class="header__bar">
     <a class="brand" href="#top" aria-label="Noa Vega — home">
-      <span class="brand__mark" aria-hidden="true"></span>Noa Vega
+      <span class="brand__mark" aria-hidden="true">NV</span>Noa Vega
     </a>
 
     <nav class="nav nav--desktop" aria-label="Primary">
       <a href="#reel">Reel</a>
       <a href="#work">Work</a>
       <a href="#about">About</a>
-      <a href="#toolkit">Toolkit</a>
+      <a href="#services">Services</a>
+      <a href="#journey">Journey</a>
       <a href="#contact">Contact</a>
     </nav>
 
     <div class="header__actions">
-      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to light theme">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" id="themeIcon">
-          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to dark theme">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" id="themeIcon">
+          <path d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.7-5.7 1.4-1.4M4.9 19.1l1.4-1.4m11.4 0 1.4 1.4M4.9 4.9l1.4 1.4M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/>
         </svg>
       </button>
       <a class="btn" href="#contact">
-        Hire me
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-          <path d="M2 10 10 2M4 2h6v6"/>
-        </svg>
+        Let's Talk
+        <span class="btn__ico" aria-hidden="true">
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10 10 2M4 2h6v6"/></svg>
+        </span>
       </a>
       <button class="icon-btn burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
         <span></span><span></span><span></span>
@@ -74,16 +75,17 @@
 <div class="menu" id="menu" aria-hidden="true">
   <nav aria-label="Mobile">
     <ul class="menu__list">
-      <li><a href="#reel">Reel</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#toolkit">Toolkit</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#reel">Reel <span aria-hidden="true">→</span></a></li>
+      <li><a href="#work">Work <span aria-hidden="true">→</span></a></li>
+      <li><a href="#about">About <span aria-hidden="true">→</span></a></li>
+      <li><a href="#services">Services <span aria-hidden="true">→</span></a></li>
+      <li><a href="#journey">Journey <span aria-hidden="true">→</span></a></li>
+      <li><a href="#contact">Contact <span aria-hidden="true">→</span></a></li>
     </ul>
   </nav>
   <div class="menu__foot">
     <span>hey@noavega.tv</span>
-    <span>Barcelona — CET, remote worldwide</span>
+    <span>Barcelona — CET</span>
   </div>
 </div>
 
@@ -92,51 +94,130 @@
 <!-- Hero --------------------------------------------------------------- -->
 <section class="hero" id="top">
   <div class="hero__glow" aria-hidden="true"></div>
-  <div class="shell">
+  <div class="shell hero__inner">
 
-    <div class="hero__top">
-      <p class="badge" data-reveal>
-        <span class="badge__dot" aria-hidden="true"></span>
-        Booking from September 2026
-      </p>
-      <p class="lead" data-reveal style="--delay:80ms">
-        Freelance motion designer and animator. I make brands move — in 3D,
-        in type, and in the six seconds before someone scrolls away.
-      </p>
+    <p class="chip" data-reveal>
+      <span class="chip__ico" aria-hidden="true">
+        <svg width="11" height="11" viewBox="0 0 12 12" fill="currentColor"><path d="M6 0l1.5 3.6L11.4 4l-3 2.8.8 3.9L6 8.8 2.8 10.7l.8-3.9L.6 4l3.9-.4z"/></svg>
+      </span>
+      Award-Winning Motion Designer
+    </p>
+
+    <h1 class="hero__name" data-reveal style="--delay:60ms">I'm <em>Noa Vega</em></h1>
+
+    <p class="hero__role" data-reveal style="--delay:120ms">
+      Motion Designer &amp; Animator based in Barcelona — making brands move in
+      3D, type and title design.
+    </p>
+
+    <div class="hero__stage" data-reveal style="--delay:180ms">
+
+      <span class="float float--a" aria-hidden="true"><span class="float__dot"></span>3D &amp; Simulation</span>
+      <span class="float float--b" aria-hidden="true"><span class="float__dot"></span>Kinetic Type</span>
+      <span class="float float--c" aria-hidden="true"><span class="float__dot"></span>Title Design</span>
+      <span class="float float--d" aria-hidden="true"><span class="float__dot"></span>Lottie &amp; UI</span>
+
+      <span class="seal" aria-hidden="true">
+        <svg class="seal__ring" viewBox="0 0 120 120">
+          <defs><path id="sealPath" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+          <text><textPath href="#sealPath">Motion Awards 2025 · Vega Winner · </textPath></text>
+        </svg>
+        <span class="seal__core">
+          <svg width="18" height="18" viewBox="0 0 12 12" fill="currentColor"><path d="M6 0l1.5 3.6L11.4 4l-3 2.8.8 3.9L6 8.8 2.8 10.7l.8-3.9L.6 4l3.9-.4z"/></svg>
+        </span>
+      </span>
+
+      <!-- Swap this <svg> for <img src="assets/img/portrait.jpg" alt="Noa Vega"> -->
+      <div class="portrait">
+        <svg viewBox="0 0 460 480" role="img" aria-label="Portrait placeholder">
+          <defs>
+            <linearGradient id="pg" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#ffd28a"/><stop offset="1" stop-color="#f0a32c"/>
+            </linearGradient>
+          </defs>
+          <rect width="460" height="480" fill="url(#pg)"/>
+          <circle cx="230" cy="196" r="86" fill="#1b1815" opacity=".9"/>
+          <path d="M96 480c0-74 60-134 134-134s134 60 134 134z" fill="#1b1815" opacity=".9"/>
+          <circle cx="230" cy="196" r="86" fill="none" stroke="#fff" stroke-width="2" opacity=".25"/>
+        </svg>
+      </div>
     </div>
 
-    <h1 class="hero__title display" data-reveal style="--delay:120ms">
-      <span class="line"><span>Frames that</span></span>
-      <span class="line"><span>refuse to sit</span></span>
-      <span class="line"><span><em>still.</em></span></span>
-    </h1>
-
-    <div class="hero__row" data-reveal style="--delay:220ms">
-      <dl class="hero__meta">
-        <div><dt>Focus</dt><dd>3D · Kinetic type · Titles</dd></div>
-        <div><dt>Clients</dt><dd>Brands, studios, labels</dd></div>
-        <div><dt>Based in</dt><dd>Barcelona — remote</dd></div>
-      </dl>
-      <a class="scroll-cue" href="#reel">
-        Watch the reel
-        <svg width="12" height="14" viewBox="0 0 12 14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-          <path d="M6 1v11M1.5 8 6 12.5 10.5 8"/>
-        </svg>
+    <div class="hero__actions" data-reveal style="--delay:240ms">
+      <a class="btn" href="#work">
+        View Portfolio
+        <span class="btn__ico" aria-hidden="true">
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10 10 2M4 2h6v6"/></svg>
+        </span>
       </a>
+      <a class="btn btn--dark" href="#contact">
+        Hire Me
+        <span class="btn__ico" aria-hidden="true">
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10 10 2M4 2h6v6"/></svg>
+        </span>
+      </a>
+    </div>
+
+    <div class="hero__aside" data-reveal style="--delay:300ms">
+      <div class="socials">
+        <span>Follow me on</span>
+        <a class="icon-btn" href="#contact" aria-label="Vimeo">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22 7.4c-.1 2.2-1.6 5.1-4.5 8.9-3 3.9-5.6 5.9-7.7 5.9-1.3 0-2.4-1.2-3.3-3.6L4.7 12c-.7-2.4-1.4-3.6-2.2-3.6-.2 0-.7.3-1.6.9L0 8.1c1-.9 2-1.8 3-2.7 1.3-1.2 2.3-1.8 3-1.8 1.6-.2 2.6.9 3 3.3.4 2.6.7 4.2.9 4.8.5 2.2 1 3.3 1.6 3.3.5 0 1.2-.7 2.1-2.2.9-1.5 1.4-2.6 1.5-3.4.1-1.3-.4-2-1.5-2-.5 0-1.1.1-1.6.4C13 4 15 1.6 17.9 1.7c2.2.1 3.3 1.6 3.1 4.4z"/></svg>
+        </a>
+        <a class="icon-btn" href="#contact" aria-label="Instagram">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a class="icon-btn" href="#contact" aria-label="Behance">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 5h6a3 3 0 0 1 0 6H2zM2 11h6.5a3.5 3.5 0 0 1 0 7H2zM14 13h8a4 4 0 0 0-8 0v1a4 4 0 0 0 7 2.5M15 6h6"/></svg>
+        </a>
+        <a class="icon-btn" href="#contact" aria-label="LinkedIn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5M3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C21.4 8.65 22 11.1 22 14.3V21h-4v-6c0-1.5-.03-3.4-2.07-3.4-2.07 0-2.39 1.6-2.39 3.3V21h-4z"/></svg>
+        </a>
+      </div>
+
+      <div class="reviews">
+        <span class="reviews__faces" aria-hidden="true">
+          <span class="reviews__face">RM</span>
+          <span class="reviews__face">DO</span>
+          <span class="reviews__face">SN</span>
+        </span>
+        <span class="reviews__meta">
+          <b>300+ Reviews</b>
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span>4.9 of 5 — from studios &amp; brands</span>
+        </span>
+      </div>
     </div>
 
   </div>
 </section>
 
+<!-- Marquee ------------------------------------------------------------ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track" data-marquee>
+    <span class="marquee__item">3D &amp; CGI</span>
+    <span class="marquee__item">Kinetic Typography</span>
+    <span class="marquee__item">Title Sequences</span>
+    <span class="marquee__item">Brand Idents</span>
+    <span class="marquee__item">UI Motion</span>
+    <span class="marquee__item">Simulation</span>
+  </div>
+</div>
+
 <!-- Showreel ----------------------------------------------------------- -->
-<section class="section section--tight" id="reel">
+<section class="section" id="reel">
   <div class="shell">
-    <div class="work__head">
+    <div class="sec-head">
       <div>
-        <p class="eyebrow" data-reveal>(01) — Showreel 2026</p>
-        <h2 class="h2 display" data-reveal style="--delay:60ms">Ninety seconds,<br><em>no filler</em></h2>
+        <p class="chip" data-reveal>
+          <span class="chip__ico" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="currentColor"><path d="M2 1v10l8-5z"/></svg>
+          </span>
+          Showreel 2026
+        </p>
+        <h2 class="sec-title" data-reveal style="--delay:60ms">Ninety Seconds, <em>No Filler</em></h2>
       </div>
-      <p class="lead" data-reveal style="--delay:120ms">
+      <p data-reveal style="--delay:120ms">
         A cut of the last eighteen months — commercial work, personal loops and
         two things that never aired.
       </p>
@@ -145,39 +226,29 @@
     <button class="reel" id="reelBtn" type="button" data-reveal
             aria-label="Play showreel 2026" aria-haspopup="dialog">
       <svg class="reel__bg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-        <defs>
-          <linearGradient id="reelG" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#1a2116"/>
-            <stop offset="0.55" stop-color="#101216"/>
-            <stop offset="1" stop-color="#0b0b0c"/>
-          </linearGradient>
-        </defs>
+        <defs><linearGradient id="reelG" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#2b2118"/><stop offset="1" stop-color="#151310"/>
+        </linearGradient></defs>
         <rect width="1600" height="900" fill="url(#reelG)"/>
-        <g fill="none" stroke="#efebe4" stroke-width="1" opacity=".16">
+        <g fill="none" stroke="#f7f2e9" stroke-width="1" opacity=".14">
           <path d="M0 300 Q 400 140 800 300 T 1600 300"/>
           <path d="M0 450 Q 400 290 800 450 T 1600 450"/>
           <path d="M0 600 Q 400 440 800 600 T 1600 600"/>
           <path d="M0 750 Q 400 590 800 750 T 1600 750"/>
         </g>
-        <g opacity=".7">
-          <circle class="anim a-pulse"    cx="230"  cy="220" r="34" fill="#c8f169"/>
-          <circle class="anim a-pulse d2" cx="1380" cy="680" r="24" fill="#c8f169"/>
-          <rect class="anim a-rise d1"    x="1300" y="200" width="70" height="70" rx="10"
-                fill="none" stroke="#efebe4" stroke-width="2" opacity=".6"/>
-          <rect class="anim a-morph d3"   x="200"  y="640" width="80" height="80" rx="18"
-                fill="none" stroke="#efebe4" stroke-width="2" opacity=".6"/>
+        <g opacity=".8">
+          <circle class="anim a-pulse"    cx="230"  cy="220" r="34" fill="#f0a32c"/>
+          <circle class="anim a-pulse d2" cx="1380" cy="680" r="24" fill="#f0a32c"/>
+          <rect class="anim a-rise d1"    x="1300" y="200" width="70" height="70" rx="14"
+                fill="none" stroke="#f7f2e9" stroke-width="2" opacity=".55"/>
+          <rect class="anim a-morph d3"   x="200"  y="640" width="80" height="80" rx="20"
+                fill="none" stroke="#f7f2e9" stroke-width="2" opacity=".55"/>
         </g>
       </svg>
 
       <span class="reel__play">
-        <svg class="reel__ring" viewBox="0 0 200 200" aria-hidden="true">
-          <defs><path id="ringPath" d="M100,100 m-76,0 a76,76 0 1,1 152,0 a76,76 0 1,1 -152,0"/></defs>
-          <text><textPath href="#ringPath">Showreel 2026 · Showreel 2026 · </textPath></text>
-        </svg>
         <span class="reel__disc">
-          <svg width="26" height="30" viewBox="0 0 26 30" fill="currentColor" aria-hidden="true">
-            <path d="M0 0v30l26-15z"/>
-          </svg>
+          <svg width="24" height="28" viewBox="0 0 26 30" fill="currentColor" aria-hidden="true"><path d="M0 0v30l26-15z"/></svg>
         </span>
       </span>
 
@@ -189,26 +260,18 @@
   </div>
 </section>
 
-<!-- Marquee ------------------------------------------------------------ -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee__track" data-marquee>
-    <span class="marquee__item">After Effects</span>
-    <span class="marquee__item">Cinema 4D</span>
-    <span class="marquee__item">Houdini</span>
-    <span class="marquee__item">Redshift</span>
-    <span class="marquee__item">Blender</span>
-    <span class="marquee__item">Nuke</span>
-    <span class="marquee__item">Premiere</span>
-  </div>
-</div>
-
 <!-- Work --------------------------------------------------------------- -->
 <section class="section" id="work">
   <div class="shell">
-    <div class="work__head">
+    <div class="sec-head">
       <div>
-        <p class="eyebrow" data-reveal>(02) — Selected work</p>
-        <h2 class="h2 display" data-reveal style="--delay:60ms">Things that <em>moved</em></h2>
+        <p class="chip" data-reveal>
+          <span class="chip__ico" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="currentColor"><rect width="12" height="12" rx="3"/></svg>
+          </span>
+          My Portfolio
+        </p>
+        <h2 class="sec-title" data-reveal style="--delay:60ms">Take a Look at My <em>Recent Work</em></h2>
       </div>
       <div class="filters" role="group" aria-label="Filter projects" id="filters">
         <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
@@ -221,30 +284,28 @@
 
     <div class="work__grid" id="workGrid">
 
-      <!-- 01 — Kinetic type -->
       <article class="project project--wide" data-cat="2d" data-reveal>
         <a class="project__media" href="#work" aria-label="Nova — kinetic type campaign, view project">
           <svg class="project__canvas" viewBox="0 0 1200 525" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">
             <defs><linearGradient id="p1" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#1b2118"/><stop offset="1" stop-color="#0c0e0c"/>
+              <stop offset="0" stop-color="#2b2118"/><stop offset="1" stop-color="#141210"/>
             </linearGradient></defs>
             <rect width="1200" height="525" fill="url(#p1)"/>
-            <g fill="#c8f169">
-              <rect class="anim a-rise"    x="180" y="230" width="52" height="130" rx="6"/>
-              <rect class="anim a-rise d1" x="262" y="200" width="52" height="160" rx="6"/>
-              <rect class="anim a-rise d2" x="344" y="250" width="52" height="110" rx="6"/>
+            <g fill="#f0a32c">
+              <rect class="anim a-rise"    x="180" y="230" width="52" height="130" rx="10"/>
+              <rect class="anim a-rise d1" x="262" y="200" width="52" height="160" rx="10"/>
+              <rect class="anim a-rise d2" x="344" y="250" width="52" height="110" rx="10"/>
             </g>
-            <g fill="none" stroke="#efebe4" stroke-width="2" opacity=".55">
-              <rect class="anim a-rise d3" x="426" y="215" width="52" height="145" rx="6"/>
-              <rect class="anim a-rise d4" x="508" y="245" width="52" height="115" rx="6"/>
+            <g fill="none" stroke="#f7f2e9" stroke-width="2" opacity=".5">
+              <rect class="anim a-rise d3" x="426" y="215" width="52" height="145" rx="10"/>
+              <rect class="anim a-rise d4" x="508" y="245" width="52" height="115" rx="10"/>
             </g>
-            <g class="anim a-slide d2" opacity=".9">
-              <rect x="700" y="240" width="300" height="10" rx="5" fill="#efebe4" opacity=".55"/>
-              <rect x="700" y="270" width="190" height="10" rx="5" fill="#efebe4" opacity=".28"/>
+            <g class="anim a-slide d2">
+              <rect x="700" y="240" width="300" height="12" rx="6" fill="#f7f2e9" opacity=".5"/>
+              <rect x="700" y="272" width="190" height="12" rx="6" fill="#f7f2e9" opacity=".25"/>
             </g>
-            <rect x="180" y="392" width="820" height="2" fill="#efebe4" opacity=".2"/>
+            <rect x="180" y="392" width="820" height="2" rx="1" fill="#f7f2e9" opacity=".18"/>
           </svg>
-          <span class="project__veil" aria-hidden="true"></span>
           <span class="project__cta" aria-hidden="true">Watch
             <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10 10 2M4 2h6v6"/></svg>
           </span>
@@ -255,63 +316,57 @@
         </div>
       </article>
 
-      <!-- 02 — 3D product loop -->
       <article class="project" data-cat="3d" data-reveal>
         <a class="project__media" href="#work" aria-label="Aurora — 3D product loop, view project">
           <svg class="project__canvas" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">
             <defs><radialGradient id="p2" cx=".5" cy=".45" r=".7">
-              <stop offset="0" stop-color="#23301c"/><stop offset="1" stop-color="#0a0d0a"/>
+              <stop offset="0" stop-color="#33271a"/><stop offset="1" stop-color="#121110"/>
             </radialGradient></defs>
             <rect width="800" height="600" fill="url(#p2)"/>
             <g class="anim anim--vb a-orbit" style="transform-origin:400px 300px">
-              <ellipse cx="400" cy="300" rx="230" ry="82" fill="none" stroke="#efebe4" stroke-width="1.5" opacity=".45"/>
-              <circle cx="630" cy="300" r="11" fill="#c8f169"/>
+              <ellipse cx="400" cy="300" rx="230" ry="82" fill="none" stroke="#f7f2e9" stroke-width="1.5" opacity=".4"/>
+              <circle cx="630" cy="300" r="11" fill="#f0a32c"/>
             </g>
             <g class="anim anim--vb a-orbit d3" style="transform-origin:400px 300px">
-              <ellipse cx="400" cy="300" rx="230" ry="82" fill="none" stroke="#efebe4" stroke-width="1.5"
-                       opacity=".3" transform="rotate(62 400 300)"/>
+              <ellipse cx="400" cy="300" rx="230" ry="82" fill="none" stroke="#f7f2e9" stroke-width="1.5"
+                       opacity=".28" transform="rotate(62 400 300)"/>
             </g>
-            <circle class="anim a-pulse" cx="400" cy="300" r="62" fill="#c8f169" opacity=".9"/>
-            <circle cx="400" cy="300" r="30" fill="#0a0d0a" opacity=".55"/>
+            <circle class="anim a-pulse" cx="400" cy="300" r="62" fill="#f0a32c" opacity=".9"/>
+            <circle cx="400" cy="300" r="30" fill="#121110" opacity=".5"/>
           </svg>
-          <span class="project__veil" aria-hidden="true"></span>
           <span class="project__cta" aria-hidden="true">Watch
             <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10 10 2M4 2h6v6"/></svg>
           </span>
         </a>
         <div class="project__info">
           <h3 class="project__name">Aurora — Product Loop</h3>
-          <span class="project__cat">3D · Redshift — 2026</span>
+          <span class="project__cat">3D — 2026</span>
         </div>
       </article>
 
-      <!-- 03 — Title sequence -->
       <article class="project" data-cat="titles" data-reveal style="--delay:80ms">
         <a class="project__media" href="#work" aria-label="Signal — title sequence, view project">
           <svg class="project__canvas" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">
             <defs>
               <linearGradient id="p3" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#161821"/><stop offset="1" stop-color="#08090c"/>
+                <stop offset="0" stop-color="#221d18"/><stop offset="1" stop-color="#101010"/>
               </linearGradient>
               <linearGradient id="p3s" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#c8f169" stop-opacity="0"/>
-                <stop offset=".5" stop-color="#c8f169" stop-opacity=".75"/>
-                <stop offset="1" stop-color="#c8f169" stop-opacity="0"/>
+                <stop offset="0" stop-color="#f0a32c" stop-opacity="0"/>
+                <stop offset=".5" stop-color="#f0a32c" stop-opacity=".7"/>
+                <stop offset="1" stop-color="#f0a32c" stop-opacity="0"/>
               </linearGradient>
             </defs>
             <rect width="800" height="600" fill="url(#p3)"/>
-            <g fill="#efebe4">
-              <rect class="anim a-blink"    x="140" y="240" width="150" height="26" rx="3" opacity=".8"/>
-              <rect class="anim a-blink d1" x="310" y="240" width="90"  height="26" rx="3" opacity=".5"/>
-              <rect class="anim a-blink d2" x="140" y="290" width="240" height="26" rx="3" opacity=".65"/>
-              <rect class="anim a-blink d3" x="140" y="340" width="120" height="26" rx="3" opacity=".35"/>
+            <g fill="#f7f2e9">
+              <rect class="anim a-blink"    x="140" y="240" width="150" height="26" rx="6" opacity=".8"/>
+              <rect class="anim a-blink d1" x="310" y="240" width="90"  height="26" rx="6" opacity=".5"/>
+              <rect class="anim a-blink d2" x="140" y="290" width="240" height="26" rx="6" opacity=".65"/>
+              <rect class="anim a-blink d3" x="140" y="340" width="120" height="26" rx="6" opacity=".35"/>
             </g>
             <rect class="anim a-scan" x="0" y="0" width="800" height="70" fill="url(#p3s)"/>
-            <g stroke="#efebe4" stroke-width="1" opacity=".25">
-              <path d="M100 180 h600M100 420 h600"/>
-            </g>
+            <g stroke="#f7f2e9" stroke-width="1" opacity=".2"><path d="M100 180 h600M100 420 h600"/></g>
           </svg>
-          <span class="project__veil" aria-hidden="true"></span>
           <span class="project__cta" aria-hidden="true">Watch
             <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10 10 2M4 2h6v6"/></svg>
           </span>
@@ -322,22 +377,20 @@
         </div>
       </article>
 
-      <!-- 04 — Simulation -->
       <article class="project" data-cat="3d" data-reveal>
         <a class="project__media" href="#work" aria-label="Hydra — fluid simulation, view project">
           <svg class="project__canvas" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">
             <defs><linearGradient id="p4" x1="0" y1="1" x2="1" y2="0">
-              <stop offset="0" stop-color="#101f26"/><stop offset="1" stop-color="#080d10"/>
+              <stop offset="0" stop-color="#1f2620"/><stop offset="1" stop-color="#101210"/>
             </linearGradient></defs>
             <rect width="800" height="600" fill="url(#p4)"/>
-            <g fill="none" stroke="#c8f169" stroke-width="2">
+            <g fill="none" stroke="#f0a32c" stroke-width="2">
               <path class="anim a-morph"    d="M400 170c70 0 130 58 130 130s-60 130-130 130-130-58-130-130 60-130 130-130z" opacity=".9"/>
               <path class="anim a-morph d2" d="M400 210c50 0 92 40 92 90s-42 90-92 90-92-40-92-90 42-90 92-90z" opacity=".55"/>
               <path class="anim a-morph d4" d="M400 250c30 0 55 22 55 50s-25 50-55 50-55-22-55-50 25-50 55-50z" opacity=".3"/>
             </g>
-            <circle class="anim a-pulse d1" cx="400" cy="300" r="16" fill="#efebe4" opacity=".8"/>
+            <circle class="anim a-pulse d1" cx="400" cy="300" r="16" fill="#f7f2e9" opacity=".8"/>
           </svg>
-          <span class="project__veil" aria-hidden="true"></span>
           <span class="project__cta" aria-hidden="true">Watch
             <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10 10 2M4 2h6v6"/></svg>
           </span>
@@ -348,25 +401,23 @@
         </div>
       </article>
 
-      <!-- 05 — UI motion -->
       <article class="project" data-cat="ui" data-reveal style="--delay:80ms">
         <a class="project__media" href="#work" aria-label="Tempo — UI motion system, view project">
           <svg class="project__canvas" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">
             <defs><linearGradient id="p5" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#1c1a24"/><stop offset="1" stop-color="#0b0a0e"/>
+              <stop offset="0" stop-color="#26221c"/><stop offset="1" stop-color="#111010"/>
             </linearGradient></defs>
             <rect width="800" height="600" fill="url(#p5)"/>
-            <rect x="290" y="90" width="220" height="420" rx="30" fill="none" stroke="#efebe4" stroke-width="2" opacity=".45"/>
-            <rect x="365" y="112" width="70" height="8" rx="4" fill="#efebe4" opacity=".3"/>
+            <rect x="290" y="90" width="220" height="420" rx="34" fill="none" stroke="#f7f2e9" stroke-width="2" opacity=".4"/>
+            <rect x="365" y="112" width="70" height="8" rx="4" fill="#f7f2e9" opacity=".3"/>
             <g>
-              <rect class="anim a-slide"    x="315" y="165" width="170" height="52" rx="12" fill="#c8f169" opacity=".9"/>
-              <rect class="anim a-slide d1" x="315" y="235" width="170" height="52" rx="12" fill="#efebe4" opacity=".28"/>
-              <rect class="anim a-slide d2" x="315" y="305" width="170" height="52" rx="12" fill="#efebe4" opacity=".18"/>
-              <rect class="anim a-slide d3" x="315" y="375" width="170" height="52" rx="12" fill="#efebe4" opacity=".12"/>
+              <rect class="anim a-slide"    x="315" y="165" width="170" height="52" rx="14" fill="#f0a32c" opacity=".95"/>
+              <rect class="anim a-slide d1" x="315" y="235" width="170" height="52" rx="14" fill="#f7f2e9" opacity=".25"/>
+              <rect class="anim a-slide d2" x="315" y="305" width="170" height="52" rx="14" fill="#f7f2e9" opacity=".16"/>
+              <rect class="anim a-slide d3" x="315" y="375" width="170" height="52" rx="14" fill="#f7f2e9" opacity=".1"/>
             </g>
-            <circle class="anim a-pulse d2" cx="400" cy="470" r="16" fill="#c8f169"/>
+            <circle class="anim a-pulse d2" cx="400" cy="470" r="16" fill="#f0a32c"/>
           </svg>
-          <span class="project__veil" aria-hidden="true"></span>
           <span class="project__cta" aria-hidden="true">Watch
             <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10 10 2M4 2h6v6"/></svg>
           </span>
@@ -377,27 +428,25 @@
         </div>
       </article>
 
-      <!-- 06 — Brand ident -->
       <article class="project project--wide" data-cat="2d" data-reveal>
         <a class="project__media" href="#work" aria-label="Orbit — brand ident, view project">
           <svg class="project__canvas" viewBox="0 0 1200 525" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">
             <defs><linearGradient id="p6" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0" stop-color="#0d0d0f"/><stop offset=".5" stop-color="#1d2117"/><stop offset="1" stop-color="#0d0d0f"/>
+              <stop offset="0" stop-color="#131211"/><stop offset=".5" stop-color="#2e2419"/><stop offset="1" stop-color="#131211"/>
             </linearGradient></defs>
             <rect width="1200" height="525" fill="url(#p6)"/>
             <g class="anim anim--vb a-orbit" style="transform-origin:600px 262px">
-              <circle cx="600" cy="92"  r="14" fill="#c8f169"/>
-              <circle cx="600" cy="432" r="14" fill="#efebe4" opacity=".6"/>
+              <circle cx="600" cy="92"  r="14" fill="#f0a32c"/>
+              <circle cx="600" cy="432" r="14" fill="#f7f2e9" opacity=".55"/>
             </g>
             <g class="anim anim--vb a-orbit d3" style="transform-origin:600px 262px">
-              <circle cx="430" cy="262" r="9" fill="#efebe4" opacity=".45"/>
-              <circle cx="770" cy="262" r="9" fill="#efebe4" opacity=".45"/>
+              <circle cx="430" cy="262" r="9" fill="#f7f2e9" opacity=".4"/>
+              <circle cx="770" cy="262" r="9" fill="#f7f2e9" opacity=".4"/>
             </g>
-            <circle cx="600" cy="262" r="170" fill="none" stroke="#efebe4" stroke-width="1" opacity=".2"/>
-            <circle cx="600" cy="262" r="110" fill="none" stroke="#efebe4" stroke-width="1" opacity=".14"/>
-            <rect class="anim a-morph" x="565" y="227" width="70" height="70" rx="12" fill="#c8f169"/>
+            <circle cx="600" cy="262" r="170" fill="none" stroke="#f7f2e9" stroke-width="1" opacity=".18"/>
+            <circle cx="600" cy="262" r="110" fill="none" stroke="#f7f2e9" stroke-width="1" opacity=".12"/>
+            <rect class="anim a-morph" x="565" y="227" width="70" height="70" rx="18" fill="#f0a32c"/>
           </svg>
-          <span class="project__veil" aria-hidden="true"></span>
           <span class="project__cta" aria-hidden="true">Watch
             <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10 10 2M4 2h6v6"/></svg>
           </span>
@@ -415,65 +464,125 @@
 <!-- About -------------------------------------------------------------- -->
 <section class="section" id="about">
   <div class="shell">
-    <div class="grid about__grid">
-      <div class="about__label">
-        <p class="eyebrow" data-reveal>(03) — About</p>
+    <div class="about">
+
+      <div class="about__media" data-reveal>
+        <!-- Swap for <img src="assets/img/about.jpg" alt="Noa Vega at work"> -->
+        <svg viewBox="0 0 400 440" role="img" aria-label="Portrait placeholder">
+          <defs><linearGradient id="ag" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ffd28a"/><stop offset="1" stop-color="#f0a32c"/>
+          </linearGradient></defs>
+          <rect width="400" height="440" fill="url(#ag)"/>
+          <circle cx="200" cy="170" r="74" fill="#1b1815" opacity=".9"/>
+          <path d="M78 440c0-67 55-122 122-122s122 55 122 122z" fill="#1b1815" opacity=".9"/>
+        </svg>
+        <span class="about__badge">
+          <span class="ico-sq ico-sq--accent" style="width:38px;height:38px" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 12 12" fill="currentColor"><path d="M6 0l1.5 3.6L11.4 4l-3 2.8.8 3.9L6 8.8 2.8 10.7l.8-3.9L.6 4l3.9-.4z"/></svg>
+          </span>
+          <span><b>10 years</b><br>animating for brands &amp; studios</span>
+        </span>
       </div>
 
-      <div class="about__body">
-        <div class="about__intro" data-reveal>
-          <span class="avatar" aria-hidden="true">
-            <svg viewBox="0 0 120 120">
-              <defs><linearGradient id="av" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#2a3320"/><stop offset="1" stop-color="#101210"/>
-              </linearGradient></defs>
-              <rect width="120" height="120" fill="url(#av)"/>
-              <circle cx="60" cy="46" r="21" fill="#c8f169" opacity=".85"/>
-              <path d="M18 120c0-25 19-42 42-42s42 17 42 42z" fill="#efebe4" opacity=".35"/>
-            </svg>
+      <div>
+        <p class="chip" data-reveal>
+          <span class="chip__ico" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="currentColor"><circle cx="6" cy="6" r="6"/></svg>
           </span>
-          <div>
-            <h2 class="h3 display" style="margin-bottom:.35rem">Hi — I'm Noa.</h2>
-            <p style="color:var(--fg-dim)">Motion designer, ten years in. Barcelona.</p>
-          </div>
-        </div>
+          About Me
+        </p>
+        <h2 class="sec-title" data-reveal style="--delay:60ms">Who is <em>Noa Vega?</em></h2>
 
-        <h3 class="about__statement" data-reveal>
-          I started in a broadcast basement cutting promos.
-          <span>Now I animate for the brands that used to buy those slots.</span>
-        </h3>
+        <p data-reveal style="--delay:120ms;color:var(--fg-2)">
+          I started in a broadcast basement cutting promos. Ten years later I
+          animate for the brands that used to buy those slots — solo, or
+          embedded with studios, usually from boards through to final grade.
+        </p>
+        <p data-reveal style="--delay:160ms">
+          Most of my week is Cinema 4D and After Effects, with Houdini when
+          something needs to break, burn or pour. I like briefs with a real
+          constraint in them: a six-second cap, a fixed palette, a logo that has
+          to survive a stadium screen.
+        </p>
 
-        <div class="about__cols">
-          <p data-reveal style="--delay:60ms">
-            I work solo or embedded with studios, usually from boards through to
-            final grade. Most of my week is Cinema 4D and After Effects, with
-            Houdini when something needs to break, burn or pour.
-          </p>
-          <p data-reveal style="--delay:140ms">
-            I like briefs with a real constraint in them — a six-second cap, a
-            fixed palette, a logo that has to survive being thrown across a
-            stadium screen. Away from the desk I shoot 16mm and lose at chess.
-          </p>
-        </div>
+        <p class="about__sign" data-reveal style="--delay:200ms">Noa Vega</p>
 
         <dl class="stats">
           <div class="stat" data-reveal>
-            <dd class="stat__num" data-count="10" data-suffix="yrs">0</dd>
-            <dt class="stat__label">Animating</dt>
+            <dd class="stat__num" data-count="10" data-suffix="+">0</dd>
+            <dt class="stat__label">Years animating</dt>
           </div>
           <div class="stat" data-reveal style="--delay:80ms">
             <dd class="stat__num" data-count="230" data-suffix="+">0</dd>
             <dt class="stat__label">Spots delivered</dt>
           </div>
           <div class="stat" data-reveal style="--delay:160ms">
-            <dd class="stat__num" data-count="18">0</dd>
+            <dd class="stat__num" data-count="18" data-suffix="+">0</dd>
             <dt class="stat__label">Studios worked with</dt>
           </div>
-          <div class="stat" data-reveal style="--delay:240ms">
-            <dd class="stat__num" data-count="3">0</dd>
-            <dt class="stat__label">Motion awards</dt>
-          </div>
         </dl>
+
+        <p data-reveal style="--delay:220ms;margin-top:1.75rem">
+          <a class="btn btn--dark" href="#contact">
+            Download CV
+            <span class="btn__ico" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 1v8M2.5 6 6 9.5 9.5 6M2 11h8"/></svg>
+            </span>
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Tools -------------------------------------------------------------- -->
+<section class="section section--panel" id="tools">
+  <div class="shell center">
+    <div class="sec-head">
+      <div>
+        <p class="chip" data-reveal>
+          <span class="chip__ico" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="currentColor"><rect width="12" height="12" rx="3"/></svg>
+          </span>
+          My Favourite Tools
+        </p>
+        <h2 class="sec-title" data-reveal style="--delay:60ms">Exploring the Tools <em>Behind My Work</em></h2>
+      </div>
+    </div>
+
+    <div class="tools">
+      <div class="tool" data-reveal>
+        <span class="tool__ico" style="background:#00005b" aria-hidden="true">Ae</span>
+        <span><span class="tool__name">After Effects</span><br><span class="tool__note">Daily driver</span></span>
+      </div>
+      <div class="tool" data-reveal style="--delay:60ms">
+        <span class="tool__ico" style="background:#0d2b45" aria-hidden="true">C4D</span>
+        <span><span class="tool__name">Cinema 4D</span><br><span class="tool__note">Modelling &amp; lighting</span></span>
+      </div>
+      <div class="tool" data-reveal style="--delay:120ms">
+        <span class="tool__ico" style="background:#b31b1b" aria-hidden="true">Rs</span>
+        <span><span class="tool__name">Redshift</span><br><span class="tool__note">Rendering</span></span>
+      </div>
+      <div class="tool" data-reveal style="--delay:180ms">
+        <span class="tool__ico" style="background:#ff4713" aria-hidden="true">Hou</span>
+        <span><span class="tool__name">Houdini</span><br><span class="tool__note">Simulation</span></span>
+      </div>
+      <div class="tool" data-reveal style="--delay:240ms">
+        <span class="tool__ico" style="background:#e87d0d" aria-hidden="true">Bl</span>
+        <span><span class="tool__name">Blender</span><br><span class="tool__note">Quick turnarounds</span></span>
+      </div>
+      <div class="tool" data-reveal style="--delay:300ms">
+        <span class="tool__ico" style="background:#1a1a1a" aria-hidden="true">Nk</span>
+        <span><span class="tool__name">Nuke</span><br><span class="tool__note">Compositing</span></span>
+      </div>
+      <div class="tool" data-reveal style="--delay:360ms">
+        <span class="tool__ico" style="background:#9999ff" aria-hidden="true">Pr</span>
+        <span><span class="tool__name">Premiere</span><br><span class="tool__note">Edit &amp; delivery</span></span>
+      </div>
+      <div class="tool" data-reveal style="--delay:420ms">
+        <span class="tool__ico" style="background:#0acf83" aria-hidden="true">Fig</span>
+        <span><span class="tool__name">Figma &amp; Lottie</span><br><span class="tool__note">UI handover</span></span>
       </div>
     </div>
   </div>
@@ -482,30 +591,37 @@
 <!-- Services ----------------------------------------------------------- -->
 <section class="section" id="services">
   <div class="shell">
-    <div class="services__head">
+    <div class="sec-head">
       <div>
-        <p class="eyebrow" data-reveal>(04) — What I do</p>
-        <h2 class="h2 display" data-reveal style="--delay:60ms">Four things,<br><em>done properly</em></h2>
+        <p class="chip" data-reveal>
+          <span class="chip__ico" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="currentColor"><path d="M6 0l1.5 3.6L11.4 4l-3 2.8.8 3.9L6 8.8 2.8 10.7l.8-3.9L.6 4l3.9-.4z"/></svg>
+          </span>
+          My Services
+        </p>
+        <h2 class="sec-title" data-reveal style="--delay:60ms">How I Bring <em>Ideas to Life</em></h2>
       </div>
-      <p class="lead" data-reveal style="--delay:120ms">
+      <p data-reveal style="--delay:120ms">
         Day rate or fixed project fee. Boards and animatics always come before a
         single keyframe.
       </p>
     </div>
 
-    <div class="services" id="services-list">
+    <div id="services-list">
 
       <div class="service">
         <button class="service__btn" type="button" aria-expanded="false" aria-controls="svc-1">
           <span class="service__idx">01</span>
+          <span class="ico-sq" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 2 7l10 5 10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </span>
           <span class="service__name">3D &amp; CGI</span>
           <span class="service__toggle" aria-hidden="true">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 1v10M1 6h10"/></svg>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 1v10M1 6h10"/></svg>
           </span>
         </button>
         <div class="service__panel" id="svc-1"><div>
           <div class="service__content">
-            <span></span>
             <p>Product loops, abstract environments and simulation work — modelled,
               lit and rendered in-house. Redshift for beauty, Houdini when physics
               has to do the acting.</p>
@@ -520,17 +636,19 @@
       <div class="service">
         <button class="service__btn" type="button" aria-expanded="false" aria-controls="svc-2">
           <span class="service__idx">02</span>
+          <span class="ico-sq" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6V4h16v2M12 4v16M9 20h6"/></svg>
+          </span>
           <span class="service__name">Kinetic Typography</span>
           <span class="service__toggle" aria-hidden="true">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 1v10M1 6h10"/></svg>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 1v10M1 6h10"/></svg>
           </span>
         </button>
         <div class="service__panel" id="svc-2"><div>
           <div class="service__content">
-            <span></span>
             <p>Type that carries the message instead of decorating it. Social
-              cutdowns, campaign beds and lyric work — built to survive being
-              muted and watched at 20% screen size.</p>
+              cutdowns, campaign beds and lyric work — built to survive being muted
+              and watched at 20% screen size.</p>
             <div class="tags">
               <span class="tag">After Effects</span><span class="tag">Type design</span>
               <span class="tag">Social cutdowns</span><span class="tag">Captions</span>
@@ -542,17 +660,19 @@
       <div class="service">
         <button class="service__btn" type="button" aria-expanded="false" aria-controls="svc-3">
           <span class="service__idx">03</span>
+          <span class="ico-sq" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M2 9h20M7 4v5M17 4v5"/></svg>
+          </span>
           <span class="service__name">Titles &amp; Idents</span>
           <span class="service__toggle" aria-hidden="true">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 1v10M1 6h10"/></svg>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 1v10M1 6h10"/></svg>
           </span>
         </button>
         <div class="service__panel" id="svc-3"><div>
           <div class="service__content">
-            <span></span>
-            <p>Opening sequences, channel idents and logo animations, delivered as
-              a flexible system rather than one hero file — with the alternates,
-              stings and endcards your team will inevitably need.</p>
+            <p>Opening sequences, channel idents and logo animations, delivered as a
+              flexible system rather than one hero file — with the alternates, stings
+              and endcards your team will inevitably need.</p>
             <div class="tags">
               <span class="tag">Title design</span><span class="tag">Idents</span>
               <span class="tag">Logo animation</span><span class="tag">Sound design</span>
@@ -564,17 +684,19 @@
       <div class="service">
         <button class="service__btn" type="button" aria-expanded="false" aria-controls="svc-4">
           <span class="service__idx">04</span>
+          <span class="ico-sq" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>
+          </span>
           <span class="service__name">UI &amp; Product Motion</span>
           <span class="service__toggle" aria-hidden="true">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 1v10M1 6h10"/></svg>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 1v10M1 6h10"/></svg>
           </span>
         </button>
         <div class="service__panel" id="svc-4"><div>
           <div class="service__content">
-            <span></span>
             <p>Motion systems for apps and sites — documented easing, duration and
-              choreography rules, shipped as Lottie and handed over with a spec
-              your engineers can actually implement.</p>
+              choreography rules, shipped as Lottie and handed over with a spec your
+              engineers can actually implement.</p>
             <div class="tags">
               <span class="tag">Lottie</span><span class="tag">Motion specs</span>
               <span class="tag">Prototyping</span><span class="tag">Handover</span>
@@ -587,165 +709,223 @@
   </div>
 </section>
 
-<!-- Toolkit ------------------------------------------------------------ -->
-<section class="section" id="toolkit">
+<!-- Journey ------------------------------------------------------------ -->
+<section class="section" id="journey">
   <div class="shell">
-    <div class="services__head">
+    <div class="sec-head">
       <div>
-        <p class="eyebrow" data-reveal>(05) — Toolkit</p>
-        <h2 class="h2 display" data-reveal style="--delay:60ms">The <em>kit</em></h2>
+        <p class="chip" data-reveal>
+          <span class="chip__ico" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="currentColor"><rect width="12" height="12" rx="3"/></svg>
+          </span>
+          Experience
+        </p>
+        <h2 class="sec-title" data-reveal style="--delay:60ms">My Award-Winning <em>Design Journey</em></h2>
       </div>
-      <p class="lead" data-reveal style="--delay:120ms">
-        Ten years of muscle memory. Happy to work inside your pipeline and your
-        naming conventions.
-      </p>
-    </div>
-
-    <div class="toolkit">
-      <div class="tool" data-reveal>
-        <div class="tool__row"><span class="tool__name">After Effects</span><span class="tool__lvl">Expert</span></div>
-        <div class="tool__bar"><span class="tool__fill" data-fill="98"></span></div>
-      </div>
-      <div class="tool" data-reveal style="--delay:60ms">
-        <div class="tool__row"><span class="tool__name">Cinema 4D</span><span class="tool__lvl">Expert</span></div>
-        <div class="tool__bar"><span class="tool__fill" data-fill="94"></span></div>
-      </div>
-      <div class="tool" data-reveal style="--delay:120ms">
-        <div class="tool__row"><span class="tool__name">Redshift / Octane</span><span class="tool__lvl">Advanced</span></div>
-        <div class="tool__bar"><span class="tool__fill" data-fill="88"></span></div>
-      </div>
-      <div class="tool" data-reveal style="--delay:180ms">
-        <div class="tool__row"><span class="tool__name">Houdini</span><span class="tool__lvl">Advanced</span></div>
-        <div class="tool__bar"><span class="tool__fill" data-fill="76"></span></div>
-      </div>
-      <div class="tool" data-reveal style="--delay:240ms">
-        <div class="tool__row"><span class="tool__name">Blender</span><span class="tool__lvl">Working</span></div>
-        <div class="tool__bar"><span class="tool__fill" data-fill="70"></span></div>
-      </div>
-      <div class="tool" data-reveal style="--delay:300ms">
-        <div class="tool__row"><span class="tool__name">Nuke / Fusion</span><span class="tool__lvl">Working</span></div>
-        <div class="tool__bar"><span class="tool__fill" data-fill="64"></span></div>
-      </div>
-      <div class="tool" data-reveal style="--delay:360ms">
-        <div class="tool__row"><span class="tool__name">Premiere / Resolve</span><span class="tool__lvl">Advanced</span></div>
-        <div class="tool__bar"><span class="tool__fill" data-fill="82"></span></div>
-      </div>
-      <div class="tool" data-reveal style="--delay:420ms">
-        <div class="tool__row"><span class="tool__name">Figma / Lottie</span><span class="tool__lvl">Advanced</span></div>
-        <div class="tool__bar"><span class="tool__fill" data-fill="86"></span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Experience --------------------------------------------------------- -->
-<section class="section" id="experience">
-  <div class="shell">
-    <div class="services__head">
-      <div>
-        <p class="eyebrow" data-reveal>(06) — Experience</p>
-        <h2 class="h2 display" data-reveal style="--delay:60ms">Ten years,<br><em>abbreviated</em></h2>
-      </div>
-      <p class="lead" data-reveal style="--delay:120ms">
+      <p data-reveal style="--delay:120ms">
         Full CV on request — it has more logos and fewer opinions.
       </p>
     </div>
 
-    <div class="timeline">
-      <article class="tl" data-reveal>
-        <div class="tl__when">2022 — NOW</div>
-        <div>
-          <h3 class="tl__role">Freelance Motion Designer</h3>
-          <p class="tl__where">Independent — Barcelona &amp; remote</p>
-          <p class="tl__desc">Direct-to-brand and studio overflow work. Campaigns, idents
-            and product films for clients across Europe and the US, usually as the
-            only motion person on the job.</p>
-        </div>
+    <div class="journey">
+      <article class="card card--hover" data-reveal>
+        <span class="jrn__when">2022 — Now</span>
+        <h3 class="jrn__role">Freelance Motion Designer</h3>
+        <p class="jrn__where">Independent — Barcelona &amp; remote</p>
+        <p class="jrn__desc">Direct-to-brand and studio overflow work. Campaigns, idents
+          and product films across Europe and the US, usually as the only motion
+          person on the job.</p>
       </article>
 
-      <article class="tl" data-reveal style="--delay:60ms">
-        <div class="tl__when">2019 — 2022</div>
-        <div>
-          <h3 class="tl__role">Senior Motion Designer</h3>
-          <p class="tl__where">Fold Studio — Berlin</p>
-          <p class="tl__desc">Led motion on brand refreshes for fintech and music clients.
-            Built the studio's 3D pipeline and mentored two juniors into mid-weights.</p>
-        </div>
+      <article class="card card--hover" data-reveal style="--delay:60ms">
+        <span class="jrn__when">2019 — 2022</span>
+        <h3 class="jrn__role">Senior Motion Designer</h3>
+        <p class="jrn__where">Fold Studio — Berlin</p>
+        <p class="jrn__desc">Led motion on brand refreshes for fintech and music clients.
+          Built the studio's 3D pipeline and mentored two juniors into mid-weights.</p>
       </article>
 
-      <article class="tl" data-reveal style="--delay:120ms">
-        <div class="tl__when">2017 — 2019</div>
-        <div>
-          <h3 class="tl__role">Motion Designer</h3>
-          <p class="tl__where">Northlight — London</p>
-          <p class="tl__desc">Broadcast idents, sports packages and a lot of very fast
-            social cutdowns. Learned to animate to a deadline measured in hours.</p>
-        </div>
+      <article class="card card--hover" data-reveal style="--delay:120ms">
+        <span class="jrn__when">2017 — 2019</span>
+        <h3 class="jrn__role">Motion Designer</h3>
+        <p class="jrn__where">Northlight — London</p>
+        <p class="jrn__desc">Broadcast idents, sports packages and a lot of very fast
+          social cutdowns. Learned to animate to a deadline measured in hours.</p>
       </article>
 
-      <article class="tl" data-reveal style="--delay:180ms">
-        <div class="tl__when">2016 — 2017</div>
-        <div>
-          <h3 class="tl__role">Junior Editor &amp; Animator</h3>
-          <p class="tl__where">Canal Vint-i-U — Barcelona</p>
-          <p class="tl__desc">Regional broadcast. Cut promos overnight, built the lower-third
-            system, and discovered that motion was the part I actually wanted.</p>
+      <article class="card card--hover" data-reveal style="--delay:180ms">
+        <span class="jrn__when">2016 — 2017</span>
+        <h3 class="jrn__role">Junior Editor &amp; Animator</h3>
+        <p class="jrn__where">Canal Vint-i-U — Barcelona</p>
+        <p class="jrn__desc">Regional broadcast. Cut promos overnight, built the
+          lower-third system, and discovered motion was the part I actually wanted.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Awards ------------------------------------------------------------- -->
+<section class="section section--tight">
+  <div class="shell">
+    <div class="sec-head">
+      <div>
+        <p class="chip" data-reveal>
+          <span class="chip__ico" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="currentColor"><path d="M6 0l1.5 3.6L11.4 4l-3 2.8.8 3.9L6 8.8 2.8 10.7l.8-3.9L.6 4l3.9-.4z"/></svg>
+          </span>
+          Recognition
+        </p>
+        <h2 class="sec-title" data-reveal style="--delay:60ms">Awards &amp; <em>Mentions</em></h2>
+      </div>
+    </div>
+
+    <div class="awards">
+      <article class="card card--hover award" data-reveal>
+        <div class="award__top">
+          <span class="ico-sq ico-sq--accent" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-2.5L17 22l-1.5-8"/></svg>
+          </span>
+          <div>
+            <span class="award__year">2025</span>
+            <h3 class="award__name">Motion Awards — Gold</h3>
+          </div>
         </div>
+        <p>Best Title Sequence for <em>Signal</em>, judged across 900+ entries.</p>
+      </article>
+
+      <article class="card card--hover award" data-reveal style="--delay:60ms">
+        <div class="award__top">
+          <span class="ico-sq ico-sq--accent" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 2 7l10 5 10-5zM2 17l10 5 10-5"/></svg>
+          </span>
+          <div>
+            <span class="award__year">2024</span>
+            <h3 class="award__name">Site of the Day</h3>
+          </div>
+        </div>
+        <p>Awwwards SOTD for the <em>Orbit</em> ident microsite and its motion system.</p>
+      </article>
+
+      <article class="card card--hover award" data-reveal style="--delay:120ms">
+        <div class="award__top">
+          <span class="ico-sq ico-sq--accent" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v12H4zM8 20h8M12 16v4"/></svg>
+          </span>
+          <div>
+            <span class="award__year">2023</span>
+            <h3 class="award__name">Vimeo Staff Pick</h3>
+          </div>
+        </div>
+        <p>Selected twice — for <em>Hydra</em> and the 2023 personal reel.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Process ------------------------------------------------------------ -->
+<section class="section section--panel">
+  <div class="shell center">
+    <div class="sec-head">
+      <div>
+        <p class="chip" data-reveal>
+          <span class="chip__ico" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="currentColor"><circle cx="6" cy="6" r="6"/></svg>
+          </span>
+          My Process
+        </p>
+        <h2 class="sec-title" data-reveal style="--delay:60ms">The Way <em>I Work</em></h2>
+      </div>
+    </div>
+
+    <div class="process" style="text-align:left">
+      <article class="card card--hover" data-reveal>
+        <span class="step__num">01</span>
+        <h3 class="step__title">Brief &amp; Research</h3>
+        <p>What it's for, who it's for, and where it plays. Reference boards before
+          anything moves.</p>
+      </article>
+      <article class="card card--hover" data-reveal style="--delay:60ms">
+        <span class="step__num">02</span>
+        <h3 class="step__title">Boards &amp; Animatic</h3>
+        <p>Frames and a timed animatic with scratch sound, so we agree on pacing
+          before it gets expensive.</p>
+      </article>
+      <article class="card card--hover" data-reveal style="--delay:120ms">
+        <span class="step__num">03</span>
+        <h3 class="step__title">Animate &amp; Render</h3>
+        <p>Blocking, then polish, then lookdev. Weekly WIPs — you see it move long
+          before it's finished.</p>
+      </article>
+      <article class="card card--hover" data-reveal style="--delay:180ms">
+        <span class="step__num">04</span>
+        <h3 class="step__title">Deliver</h3>
+        <p>Every ratio and cutdown you need, plus project files and a handover call.</p>
       </article>
     </div>
   </div>
 </section>
 
 <!-- Testimonials ------------------------------------------------------- -->
-<section class="section">
+<section class="section" id="words">
   <div class="shell">
-    <div class="grid about__grid">
-      <div class="about__label">
-        <p class="eyebrow" data-reveal>(07) — Words</p>
+    <div class="about">
+      <div>
+        <p class="chip" data-reveal>
+          <span class="chip__ico" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="currentColor"><path d="M6 0l1.5 3.6L11.4 4l-3 2.8.8 3.9L6 8.8 2.8 10.7l.8-3.9L.6 4l3.9-.4z"/></svg>
+          </span>
+          Testimonials
+        </p>
+        <h2 class="sec-title" data-reveal style="--delay:60ms">What Clients <em>Say</em></h2>
+        <p data-reveal style="--delay:120ms;margin-top:1rem;color:var(--fg-2)">
+          Producers, creative directors and one very patient head of product.
+        </p>
       </div>
-      <div class="about__body">
-        <div class="quotes" id="quotes">
 
-          <blockquote class="quote is-active" data-quote>
-            <p class="quote__text display">"Noa turned a three-week 3D job around in nine days and it still graded beautifully."</p>
-            <div class="quote__who">
-              <span class="quote__avatar" aria-hidden="true">RM</span>
-              <div>
-                <div class="quote__name">Rosa Marchetti</div>
-                <div class="quote__role">Executive Producer, Fold Studio</div>
-              </div>
+      <div class="card quotes" id="quotes" data-reveal>
+
+        <blockquote class="quote is-active" data-quote>
+          <span class="quote__mark" aria-hidden="true">"</span>
+          <p class="quote__text">Noa turned a three-week 3D job around in nine days and it still graded beautifully.</p>
+          <div class="quote__who">
+            <span class="quote__avatar" aria-hidden="true">RM</span>
+            <div>
+              <div class="quote__name">Rosa Marchetti</div>
+              <div class="quote__role">Executive Producer, Fold Studio</div>
             </div>
-          </blockquote>
-
-          <blockquote class="quote" data-quote>
-            <p class="quote__text display">"The only animator I've briefed who sends back a better idea than the one I asked for."</p>
-            <div class="quote__who">
-              <span class="quote__avatar" aria-hidden="true">DO</span>
-              <div>
-                <div class="quote__name">Daniel Okonkwo</div>
-                <div class="quote__role">Creative Director, Northlight</div>
-              </div>
-            </div>
-          </blockquote>
-
-          <blockquote class="quote" data-quote>
-            <p class="quote__text display">"Handed our engineers a motion spec they implemented in two days. Unheard of."</p>
-            <div class="quote__who">
-              <span class="quote__avatar" aria-hidden="true">SN</span>
-              <div>
-                <div class="quote__name">Saoirse Nolan</div>
-                <div class="quote__role">Head of Product, Tempo</div>
-              </div>
-            </div>
-          </blockquote>
-
-          <div class="quotes__nav" role="tablist" aria-label="Testimonials">
-            <button class="quotes__dot" type="button" role="tab" aria-selected="true" aria-label="Testimonial 1"></button>
-            <button class="quotes__dot" type="button" role="tab" aria-selected="false" aria-label="Testimonial 2"></button>
-            <button class="quotes__dot" type="button" role="tab" aria-selected="false" aria-label="Testimonial 3"></button>
           </div>
+        </blockquote>
 
+        <blockquote class="quote" data-quote>
+          <span class="quote__mark" aria-hidden="true">"</span>
+          <p class="quote__text">The only animator I've briefed who sends back a better idea than the one I asked for.</p>
+          <div class="quote__who">
+            <span class="quote__avatar" aria-hidden="true">DO</span>
+            <div>
+              <div class="quote__name">Daniel Okonkwo</div>
+              <div class="quote__role">Creative Director, Northlight</div>
+            </div>
+          </div>
+        </blockquote>
+
+        <blockquote class="quote" data-quote>
+          <span class="quote__mark" aria-hidden="true">"</span>
+          <p class="quote__text">Handed our engineers a motion spec they implemented in two days. Unheard of.</p>
+          <div class="quote__who">
+            <span class="quote__avatar" aria-hidden="true">SN</span>
+            <div>
+              <div class="quote__name">Saoirse Nolan</div>
+              <div class="quote__role">Head of Product, Tempo</div>
+            </div>
+          </div>
+        </blockquote>
+
+        <div class="quotes__nav" role="tablist" aria-label="Testimonials">
+          <button class="quotes__dot" type="button" role="tab" aria-selected="true" aria-label="Testimonial 1"></button>
+          <button class="quotes__dot" type="button" role="tab" aria-selected="false" aria-label="Testimonial 2"></button>
+          <button class="quotes__dot" type="button" role="tab" aria-selected="false" aria-label="Testimonial 3"></button>
         </div>
+
       </div>
     </div>
   </div>
@@ -753,15 +933,25 @@
 
 <!-- CTA ---------------------------------------------------------------- -->
 <section class="cta" id="contact">
-  <div class="shell">
-    <p class="eyebrow eyebrow--center" data-reveal>(08) — Say hello</p>
-    <h2 class="cta__title" data-reveal style="--delay:60ms">Got something<br>to <em>move?</em></h2>
-    <a class="cta__mail link-u" href="mailto:hey@noavega.tv" data-reveal style="--delay:120ms">hey@noavega.tv</a>
-    <p class="lead" style="margin:2.5rem auto 0" data-reveal>
-      Booking from September 2026. Send a brief, a deck, or three sentences and a
-      deadline — all three work.
-    </p>
-  </div>
+  <span class="cta__glow" aria-hidden="true"></span>
+  <p class="chip" data-reveal style="border-color:rgba(247,242,233,.22);background:transparent;color:#f7f2e9">
+    <span class="chip__ico" aria-hidden="true">
+      <svg width="10" height="10" viewBox="0 0 12 12" fill="currentColor"><circle cx="6" cy="6" r="6"/></svg>
+    </span>
+    Available from September 2026
+  </p>
+  <h2 class="cta__title" data-reveal style="--delay:60ms">Got Something <em>to Move?</em></h2>
+  <p data-reveal style="--delay:100ms;margin-top:0">
+    Send a brief, a deck, or three sentences and a deadline — all three work.
+  </p>
+  <p data-reveal style="--delay:140ms;margin-top:2rem">
+    <a class="btn" href="mailto:hey@noavega.tv">
+      hey@noavega.tv
+      <span class="btn__ico" aria-hidden="true">
+        <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10 10 2M4 2h6v6"/></svg>
+      </span>
+    </a>
+  </p>
 </section>
 
 </main>
@@ -771,8 +961,8 @@
   <div class="shell">
     <div class="footer__grid">
       <div>
-        <a class="brand" href="#top"><span class="brand__mark" aria-hidden="true"></span>Noa Vega</a>
-        <p style="color:var(--fg-dim);margin-top:1rem;max-width:28ch">
+        <a class="brand" href="#top"><span class="brand__mark" aria-hidden="true">NV</span>Noa Vega</a>
+        <p style="color:var(--fg-2);margin-top:1rem;max-width:28ch;font-size:var(--t-sm)">
           Motion designer and animator. Barcelona, and wherever the render farm is.
         </p>
       </div>
@@ -782,7 +972,7 @@
           <li><a class="link-u" href="#reel">Showreel</a></li>
           <li><a class="link-u" href="#work">Work</a></li>
           <li><a class="link-u" href="#about">About</a></li>
-          <li><a class="link-u" href="#experience">Experience</a></li>
+          <li><a class="link-u" href="#journey">Journey</a></li>
         </ul>
       </div>
       <div>
@@ -808,7 +998,7 @@
       <span>&copy; <span id="year">2026</span> Noa Vega — Template. Fictional content.</span>
       <a class="to-top" href="#top">
         Back to top
-        <svg width="10" height="12" viewBox="0 0 12 14" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <svg width="10" height="12" viewBox="0 0 12 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <path d="M6 13V2M1.5 6.5 6 2l4.5 4.5"/>
         </svg>
       </a>
@@ -819,14 +1009,13 @@
 <!-- Showreel modal ----------------------------------------------------- -->
 <div class="modal" id="reelModal" role="dialog" aria-modal="true" aria-label="Showreel 2026" aria-hidden="true">
   <button class="modal__close" id="reelClose" type="button" aria-label="Close showreel">
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
       <path d="M2 2l12 12M14 2L2 14"/>
     </svg>
   </button>
-  <!-- Drop an <iframe> or <video> in here. data-embed on the trigger wins if set. -->
   <div class="modal__frame" id="reelFrame">
-    <p style="font-family:var(--font-mono);font-size:var(--t-xs);letter-spacing:.12em;text-transform:uppercase">
-      Add your reel — see README, “Wiring up the showreel”
+    <p style="font-size:var(--t-sm);font-weight:600">
+      Add your reel — see README, "Wiring up the showreel"
     </p>
   </div>
 </div>

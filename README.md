@@ -1,12 +1,12 @@
 # Noa Vega — Motion Designer Portfolio
 
-A dark, editorial single-page portfolio for a motion designer / animator.
-Showreel player, animated project previews, toolkit and career timeline.
+A warm, card-based single-page portfolio for a motion designer / animator.
+Showreel player, animated project previews, tools grid and career journey.
 Zero dependencies, zero build step — three files and a GitHub Actions workflow
 that publishes to GitHub Pages on every push to `main`.
 
-Visual direction inspired by the [Unfold Creative Agency Portfolio Website Template](https://dribbble.com/shots/27390290-Unfold-Creative-Agency-Portfolio-Website-Template)
-concept on Dribbble.
+Visual direction follows a cream-and-amber personal-portfolio style: a floating
+pill nav, oversized name, badge-annotated portrait, rounded cards and chip labels.
 
 > **The identity is a placeholder.** "Noa Vega", the email addresses, the
 > testimonials and the CV entries are fictional. See
@@ -22,12 +22,12 @@ concept on Dribbble.
 - **Animated project previews** — every thumbnail is a looping inline SVG that
   speeds up on hover. Nothing to encode, nothing to buffer, and it demonstrates
   motion on a motion portfolio.
-- **Dark & light themes** — follows the OS preference, overridable by a toggle,
-  persisted to `localStorage`.
+- **Light & dark themes** — cream by default, follows the OS preference,
+  overridable by a toggle, persisted to `localStorage`.
 - **Fluid typography** — every size is a `clamp()`; no fixed breakpoint jumps in
   the type scale.
-- **`prefers-reduced-motion` respected throughout** — preview loops stop, counters
-  and toolkit bars snap to final values, the custom cursor is off.
+- **`prefers-reduced-motion` respected throughout** — preview loops and floating
+  badges stop, counters snap to final values, the custom cursor is off.
 - **Accessible** — skip link, visible focus rings, real `aria-expanded` /
   `aria-pressed` / `aria-selected` state, dialog semantics on the reel modal.
 - **Resilient JS** — each module is isolated in `try/catch`; one failure can't take
@@ -39,16 +39,16 @@ concept on Dribbble.
 
 | # | Section | Notes |
 | --- | --- | --- |
-| — | Hero | Availability badge, headline, quick facts |
-| 01 | Showreel | Poster + play button → modal player |
+| — | Hero | Award chip, big name, badge-annotated portrait, review strip |
+| — | Showreel | Animated poster + play button → modal player |
 | — | Marquee | Scrolling software list |
-| 02 | Work | 6 animated previews, filterable by 3D / 2D / Titles / UI |
-| 03 | About | Avatar, bio, animated stat counters |
-| 04 | What I do | Four-discipline accordion |
-| 05 | Toolkit | Software proficiency bars |
-| 06 | Experience | Career timeline |
-| 07 | Words | Rotating testimonials |
-| 08 | Contact | Email CTA + footer |
+| — | Work | 6 animated previews, filterable by 3D / 2D / Titles / UI |
+| — | About | Portrait card, bio, signature, animated stat counters |
+| — | Services | Four-discipline accordion with icon tiles |
+| — | Tools | Software cards on a dark panel |
+| — | Journey | Career cards, then awards and process |
+| — | Testimonials | Rotating quotes in a card |
+| — | Contact | Dark CTA panel + footer |
 
 ---
 
@@ -152,16 +152,16 @@ Then the rest:
 | What | Where |
 | --- | --- |
 | Colours, fonts, spacing, motion | The `:root` token block at the top of `assets/css/style.css` |
-| Light theme | The `:root[data-theme="light"]` block just below it |
-| Accent colour | `--accent` — also update the `#c8f169` fills in the inline SVGs |
+| Dark theme | The `:root[data-theme="dark"]` block just below it |
+| Accent colour | `--accent` (fills) and `--accent-fg` (accent-coloured text) — also update the `#f0a32c` fills in the inline SVGs |
 | Copy, sections, nav | `index.html` — sections are commented and in source order |
 | Showreel | See [Wiring up the showreel](#wiring-up-the-showreel) |
 | Projects | The `<article class="project">` blocks in `#workGrid`. `data-cat` drives the filters; `project--wide` makes a card full-bleed |
 | Real thumbnails | Replace a `<svg class="project__canvas">` with `<img class="project__canvas" src="…" alt="…">`, or a muted autoplay `<video>` — the CSS covers all three |
 | Stats | `data-count` and `data-suffix` on the `.stat__num` elements |
-| Toolkit bars | `data-fill="0–100"` on each `.tool__fill` |
-| Timeline | The `<article class="tl">` blocks in `#experience` |
-| Avatar | The `<svg>` inside `.avatar` — swap for `<img src="…" alt="">` |
+| Tools | The `.tool` blocks in `#tools` — `tool__ico` takes an inline brand colour |
+| Journey | The `.card` blocks in `#journey`; awards and process below it |
+| Portrait | The `<svg>` inside `.portrait` and `.about__media` — swap for `<img src="…" alt="…">` |
 | Meta / social card | The `<head>` of `index.html` and `assets/img/og.svg` |
 
 To add a filter category, add a `.filter` button with a new `data-filter` value
@@ -170,7 +170,7 @@ and set the matching `data-cat` on the projects. No JS changes needed.
 ### Animating your own previews
 
 The preview animations are utility classes applied to shapes inside the SVG —
-see section 18 of `style.css`:
+see the “Animated project previews” section of `style.css`:
 
 | Class | Motion |
 | --- | --- |
@@ -184,7 +184,9 @@ see section 18 of `style.css`:
 
 Add `d1`–`d5` alongside to offset the start time so sibling shapes feel
 choreographed rather than synchronised. All of them require the `anim` class,
-which sets `transform-box: fill-box` so shapes rotate around their own centre.
+which sets `transform-box: fill-box` so shapes transform around their own centre.
+Add `anim--vb` when a *group* must orbit a point in viewBox coordinates instead,
+paired with an inline `transform-origin`.
 
 ---
 
