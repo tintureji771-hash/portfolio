@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unfold — Creative Agency &amp; Portfolio</title>
+<meta name="description" content="Unfold is an independent creative studio building brands, digital products and moving images for people who refuse the ordinary.">
+<meta name="theme-color" content="#0b0b0c">
+<meta name="color-scheme" content="dark light">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Unfold — Creative Agency &amp; Portfolio">
+<meta property="og:description" content="An independent creative studio building brands, digital products and moving images.">
+<meta property="og:image" content="assets/img/og.svg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Preloader ---------------------------------------------------------- -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__inner">
+    <span>Unfold</span>
+    <span class="preloader__count" id="preloaderCount">000</span>
+  </div>
+  <span class="preloader__bar" id="preloaderBar"></span>
+</div>
+
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- Header ------------------------------------------------------------- -->
+<header class="header" id="header">
+  <div class="shell header__bar">
+    <a class="brand" href="#top" aria-label="Unfold — home">
+      <span class="brand__mark" aria-hidden="true"></span>Unfold
+    </a>
+
+    <nav class="nav nav--desktop" aria-label="Primary">
+      <a href="#ethos">Ethos</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header__actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to light theme">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" id="themeIcon">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+        </svg>
+      </button>
+      <a class="btn" href="#contact">
+        Start a project
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M2 10 10 2M4 2h6v6"/>
+        </svg>
+      </a>
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu -------------------------------------------------------- -->
+<div class="menu" id="menu" aria-hidden="true">
+  <nav aria-label="Mobile">
+    <ul class="menu__list">
+      <li><a href="#ethos">Ethos</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="menu__foot">
+    <span>hello@unfold.studio</span>
+    <span>Lisbon · Berlin · Remote</span>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- Hero --------------------------------------------------------------- -->
+<section class="hero" id="top">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="shell">
+
+    <div class="hero__top">
+      <p class="eyebrow" data-reveal>Independent creative studio — Est. 2016</p>
+      <p class="lead" data-reveal style="--delay:80ms">
+        We build brands, products and films for the people who would rather be
+        remembered than merely noticed.
+      </p>
+    </div>
+
+    <h1 class="hero__title display" data-reveal style="--delay:120ms">
+      <span class="line"><span>Design that</span></span>
+      <span class="line"><span><em>unfolds</em> slowly,</span></span>
+      <span class="line"><span>lands hard.</span></span>
+    </h1>
+
+    <div class="hero__row" data-reveal style="--delay:220ms">
+      <dl class="hero__meta">
+        <div><dt>Discipline</dt><dd>Brand · Digital · Film</dd></div>
+        <div><dt>Availability</dt><dd>Q3 2026 — 2 slots</dd></div>
+        <div><dt>Based in</dt><dd>Lisbon &amp; Berlin</dd></div>
+      </dl>
+      <a class="scroll-cue" href="#ethos">
+        Scroll
+        <svg width="12" height="14" viewBox="0 0 12 14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <path d="M6 1v11M1.5 8 6 12.5 10.5 8"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Marquee ------------------------------------------------------------ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track" data-marquee>
+    <span class="marquee__item">Brand Identity</span>
+    <span class="marquee__item">Art Direction</span>
+    <span class="marquee__item">Web &amp; Product</span>
+    <span class="marquee__item">Motion</span>
+    <span class="marquee__item">Editorial</span>
+    <span class="marquee__item">Packaging</span>
+  </div>
+</div>
+
+<!-- Ethos -------------------------------------------------------------- -->
+<section class="section" id="ethos">
+  <div class="shell">
+    <div class="grid about__grid">
+      <div class="about__label">
+        <p class="eyebrow" data-reveal>(01) — Ethos</p>
+      </div>
+
+      <div class="about__body">
+        <h2 class="about__statement" data-reveal>
+          We are a small studio by choice. Fewer clients, deeper work,
+          <span>and the stubborn belief that taste still compounds.</span>
+        </h2>
+
+        <div class="about__cols">
+          <p data-reveal style="--delay:60ms">
+            Unfold began as two people and a shared frustration: strategy decks
+            that never became anything. So we made a studio where thinking and
+            making live in the same room, on the same week, under the same name.
+          </p>
+          <p data-reveal style="--delay:140ms">
+            Today we're a team of eleven working across brand systems, digital
+            products and moving image — for founders on their first raise and
+            institutions on their hundredth year.
+          </p>
+        </div>
+
+        <dl class="stats">
+          <div class="stat" data-reveal>
+            <dd class="stat__num" data-count="140" data-suffix="+">0</dd>
+            <dt class="stat__label">Projects shipped</dt>
+          </div>
+          <div class="stat" data-reveal style="--delay:80ms">
+            <dd class="stat__num" data-count="11">0</dd>
+            <dt class="stat__label">People in-house</dt>
+          </div>
+          <div class="stat" data-reveal style="--delay:160ms">
+            <dd class="stat__num" data-count="24">0</dd>
+            <dt class="stat__label">Awards &amp; mentions</dt>
+          </div>
+          <div class="stat" data-reveal style="--delay:240ms">
+            <dd class="stat__num" data-count="9" data-suffix="yrs">0</dd>
+            <dt class="stat__label">Avg. client tenure</dt>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services ----------------------------------------------------------- -->
+<section class="section" id="services">
+  <div class="shell">
+    <div class="services__head">
+      <div>
+        <p class="eyebrow" data-reveal>(02) — Capabilities</p>
+        <h2 class="h2 display" data-reveal style="--delay:60ms">What we do<br><em>end to end</em></h2>
+      </div>
+      <p class="lead" data-reveal style="--delay:120ms">
+        Four practices, one team. Most engagements braid two or three together.
+      </p>
+    </div>
+
+    <div class="services" id="services-list">
+
+      <div class="service">
+        <button class="service__btn" type="button" aria-expanded="false" aria-controls="svc-1">
+          <span class="service__idx">01</span>
+          <span class="service__name">Brand Identity</span>
+          <span class="service__toggle" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 1v10M1 6h10"/></svg>
+          </span>
+        </button>
+        <div class="service__panel" id="svc-1"><div>
+          <div class="service__content">
+            <span></span>
+            <p>Naming, positioning and the full visual system — marks, type, colour,
+              motion and the guidelines that keep it alive after we leave.</p>
+            <div class="tags">
+              <span class="tag">Strategy</span><span class="tag">Naming</span>
+              <span class="tag">Identity</span><span class="tag">Guidelines</span>
+            </div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="service">
+        <button class="service__btn" type="button" aria-expanded="false" aria-controls="svc-2">
+          <span class="service__idx">02</span>
+          <span class="service__name">Digital Product</span>
+          <span class="service__toggle" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 1v10M1 6h10"/></svg>
+          </span>
+        </button>
+        <div class="service__panel" id="svc-2"><div>
+          <div class="service__content">
+            <span></span>
+            <p>Websites, apps and design systems built with engineers in the room
+              from week one. We ship what we draw.</p>
+            <div class="tags">
+              <span class="tag">UX</span><span class="tag">UI</span>
+              <span class="tag">Design systems</span><span class="tag">Front-end</span>
+            </div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="service">
+        <button class="service__btn" type="button" aria-expanded="false" aria-controls="svc-3">
+          <span class="service__idx">03</span>
+          <span class="service__name">Motion &amp; Film</span>
+          <span class="service__toggle" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 1v10M1 6h10"/></svg>
+          </span>
+        </button>
+        <div class="service__panel" id="svc-3"><div>
+          <div class="service__content">
+            <span></span>
+            <p>Brand films, product launches and social-native cutdowns — directed,
+              shot and finished in-house.</p>
+            <div class="tags">
+              <span class="tag">Direction</span><span class="tag">3D</span>
+              <span class="tag">Animation</span><span class="tag">Sound</span>
+            </div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="service">
+        <button class="service__btn" type="button" aria-expanded="false" aria-controls="svc-4">
+          <span class="service__idx">04</span>
+          <span class="service__name">Editorial &amp; Print</span>
+          <span class="service__toggle" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 1v10M1 6h10"/></svg>
+          </span>
+        </button>
+        <div class="service__panel" id="svc-4"><div>
+          <div class="service__content">
+            <span></span>
+            <p>Books, reports and packaging. Ink still does things a screen can't,
+              and we like the reminder.</p>
+            <div class="tags">
+              <span class="tag">Books</span><span class="tag">Packaging</span>
+              <span class="tag">Signage</span><span class="tag">Production</span>
+            </div>
+          </div>
+        </div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Work --------------------------------------------------------------- -->
+<section class="section" id="work">
+  <div class="shell">
+    <div class="work__head">
+      <div>
+        <p class="eyebrow" data-reveal>(03) — Selected work</p>
+        <h2 class="h2 display" data-reveal style="--delay:60ms">Recent <em>chapters</em></h2>
+      </div>
+      <div class="filters" role="group" aria-label="Filter projects" id="filters">
+        <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="brand" aria-pressed="false">Brand</button>
+        <button class="filter" type="button" data-filter="digital" aria-pressed="false">Digital</button>
+        <button class="filter" type="button" data-filter="motion" aria-pressed="false">Motion</button>
+      </div>
+    </div>
+
+    <div class="work__grid" id="workGrid">
+
+      <article class="project project--wide" data-cat="brand" data-reveal>
+        <a class="project__media" href="#work" aria-label="Aster Botanics — view case study">
+          <svg class="project__canvas" viewBox="0 0 1200 525" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">
+            <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#1c2a1b"/><stop offset="1" stop-color="#0e1410"/>
+            </linearGradient></defs>
+            <rect width="1200" height="525" fill="url(#g1)"/>
+            <circle cx="880" cy="200" r="180" fill="none" stroke="#c8f169" stroke-width="1.2" opacity=".55"/>
+            <circle cx="880" cy="200" r="120" fill="none" stroke="#c8f169" stroke-width="1.2" opacity=".35"/>
+            <circle cx="880" cy="200" r="60" fill="#c8f169" opacity=".14"/>
+            <path d="M120 430 C 300 330, 420 470, 620 360 S 980 420, 1120 300" fill="none" stroke="#efebe4" stroke-width="1" opacity=".3"/>
+          </svg>
+          <span class="project__veil" aria-hidden="true"></span>
+          <span class="project__cta" aria-hidden="true">View case
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10 10 2M4 2h6v6"/></svg>
+          </span>
+        </a>
+        <div class="project__info">
+          <h3 class="project__name">Aster Botanics</h3>
+          <span class="project__cat">Brand — 2026</span>
+        </div>
+      </article>
+
+      <article class="project" data-cat="digital" data-reveal>
+        <a class="project__media" href="#work" aria-label="Halcyon Bank — view case study">
+          <svg class="project__canvas" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">
+            <defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#1a1c2b"/><stop offset="1" stop-color="#0d0e15"/>
+            </linearGradient></defs>
+            <rect width="800" height="600" fill="url(#g2)"/>
+            <g stroke="#efebe4" stroke-width="1" opacity=".22">
+              <path d="M80 480 h640M80 380 h640M80 280 h640M80 180 h640"/>
+            </g>
+            <path d="M80 460 L200 400 L320 430 L440 300 L560 340 L680 190" fill="none" stroke="#c8f169" stroke-width="2.5"/>
+            <circle cx="680" cy="190" r="7" fill="#c8f169"/>
+          </svg>
+          <span class="project__veil" aria-hidden="true"></span>
+          <span class="project__cta" aria-hidden="true">View case
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10 10 2M4 2h6v6"/></svg>
+          </span>
+        </a>
+        <div class="project__info">
+          <h3 class="project__name">Halcyon Bank</h3>
+          <span class="project__cat">Digital — 2025</span>
+        </div>
+      </article>
+
+      <article class="project" data-cat="motion" data-reveal style="--delay:80ms">
+        <a class="project__media" href="#work" aria-label="Nocturne Festival — view case study">
+          <svg class="project__canvas" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">
+            <defs><radialGradient id="g3" cx=".5" cy=".4">
+              <stop offset="0" stop-color="#3a1f3d"/><stop offset="1" stop-color="#100b12"/>
+            </radialGradient></defs>
+            <rect width="800" height="600" fill="url(#g3)"/>
+            <g fill="none" stroke="#efebe4" opacity=".4">
+              <ellipse cx="400" cy="300" rx="260" ry="90"/>
+              <ellipse cx="400" cy="300" rx="260" ry="90" transform="rotate(60 400 300)"/>
+              <ellipse cx="400" cy="300" rx="260" ry="90" transform="rotate(120 400 300)"/>
+            </g>
+            <circle cx="400" cy="300" r="34" fill="#c8f169"/>
+          </svg>
+          <span class="project__veil" aria-hidden="true"></span>
+          <span class="project__cta" aria-hidden="true">View case
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10 10 2M4 2h6v6"/></svg>
+          </span>
+        </a>
+        <div class="project__info">
+          <h3 class="project__name">Nocturne Festival</h3>
+          <span class="project__cat">Motion — 2025</span>
+        </div>
+      </article>
+
+      <article class="project" data-cat="brand" data-reveal>
+        <a class="project__media" href="#work" aria-label="Kiln Ceramics — view case study">
+          <svg class="project__canvas" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">
+            <defs><linearGradient id="g4" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="#2b1e16"/><stop offset="1" stop-color="#120d0a"/>
+            </linearGradient></defs>
+            <rect width="800" height="600" fill="url(#g4)"/>
+            <path d="M280 180 h240 v60 q0 40 -40 60 l-40 20 v140 h-80 V320 l-40 -20 q-40 -20 -40 -60 z"
+                  fill="none" stroke="#efebe4" stroke-width="1.5" opacity=".5"/>
+            <rect x="300" y="470" width="200" height="6" fill="#c8f169"/>
+          </svg>
+          <span class="project__veil" aria-hidden="true"></span>
+          <span class="project__cta" aria-hidden="true">View case
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10 10 2M4 2h6v6"/></svg>
+          </span>
+        </a>
+        <div class="project__info">
+          <h3 class="project__name">Kiln Ceramics</h3>
+          <span class="project__cat">Brand — 2025</span>
+        </div>
+      </article>
+
+      <article class="project" data-cat="digital" data-reveal style="--delay:80ms">
+        <a class="project__media" href="#work" aria-label="Meridian Health — view case study">
+          <svg class="project__canvas" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">
+            <defs><linearGradient id="g5" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#12262a"/><stop offset="1" stop-color="#0a1214"/>
+            </linearGradient></defs>
+            <rect width="800" height="600" fill="url(#g5)"/>
+            <g stroke="#c8f169" stroke-width="2" fill="none" opacity=".85">
+              <path d="M60 300 h180 l30 -70 40 140 35 -100 30 60 h55"/>
+            </g>
+            <rect x="470" y="180" width="270" height="240" rx="16" fill="none" stroke="#efebe4" stroke-width="1.2" opacity=".35"/>
+            <rect x="500" y="220" width="120" height="8" rx="4" fill="#efebe4" opacity=".3"/>
+            <rect x="500" y="250" width="200" height="8" rx="4" fill="#efebe4" opacity=".18"/>
+          </svg>
+          <span class="project__veil" aria-hidden="true"></span>
+          <span class="project__cta" aria-hidden="true">View case
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10 10 2M4 2h6v6"/></svg>
+          </span>
+        </a>
+        <div class="project__info">
+          <h3 class="project__name">Meridian Health</h3>
+          <span class="project__cat">Digital — 2024</span>
+        </div>
+      </article>
+
+      <article class="project project--wide" data-cat="motion" data-reveal>
+        <a class="project__media" href="#work" aria-label="Vela Automotive — view case study">
+          <svg class="project__canvas" viewBox="0 0 1200 525" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">
+            <defs><linearGradient id="g6" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#0d0d0f"/><stop offset=".5" stop-color="#1e1e24"/><stop offset="1" stop-color="#0d0d0f"/>
+            </linearGradient></defs>
+            <rect width="1200" height="525" fill="url(#g6)"/>
+            <g stroke="#efebe4" stroke-width="1" opacity=".25">
+              <path d="M0 400 Q 300 250 600 400 T 1200 400"/>
+              <path d="M0 340 Q 300 190 600 340 T 1200 340"/>
+              <path d="M0 460 Q 300 310 600 460 T 1200 460"/>
+            </g>
+            <rect x="520" y="180" width="160" height="160" rx="80" fill="none" stroke="#c8f169" stroke-width="2"/>
+            <path d="M575 260 h50M600 235 v50" stroke="#c8f169" stroke-width="2"/>
+          </svg>
+          <span class="project__veil" aria-hidden="true"></span>
+          <span class="project__cta" aria-hidden="true">View case
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10 10 2M4 2h6v6"/></svg>
+          </span>
+        </a>
+        <div class="project__info">
+          <h3 class="project__name">Vela Automotive</h3>
+          <span class="project__cat">Motion — 2024</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Process ------------------------------------------------------------ -->
+<section class="section" id="process">
+  <div class="shell">
+    <div class="services__head">
+      <div>
+        <p class="eyebrow" data-reveal>(04) — How we work</p>
+        <h2 class="h2 display" data-reveal style="--delay:60ms">Four moves,<br><em>no theatre</em></h2>
+      </div>
+      <p class="lead" data-reveal style="--delay:120ms">
+        Typically eight to fourteen weeks, with something real in your hands by week three.
+      </p>
+    </div>
+
+    <div class="process__grid">
+      <article class="step" data-reveal>
+        <span class="step__num">STEP 01</span>
+        <h3 class="step__title">Listen</h3>
+        <p>Interviews, audits, and an honest read of where the brand actually stands — not where the deck says it does.</p>
+      </article>
+      <article class="step" data-reveal style="--delay:80ms">
+        <span class="step__num">STEP 02</span>
+        <h3 class="step__title">Frame</h3>
+        <p>One page of strategy. Position, audience, tone, and the single idea everything else has to earn its place against.</p>
+      </article>
+      <article class="step" data-reveal style="--delay:160ms">
+        <span class="step__num">STEP 03</span>
+        <h3 class="step__title">Make</h3>
+        <p>Two directions, taken far enough to judge. We iterate in the open, weekly, with you in the file.</p>
+      </article>
+      <article class="step" data-reveal style="--delay:240ms">
+        <span class="step__num">STEP 04</span>
+        <h3 class="step__title">Land</h3>
+        <p>Production files, systems, and a handover session so your team can run it without calling us. They usually do anyway.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials ------------------------------------------------------- -->
+<section class="section">
+  <div class="shell">
+    <div class="grid about__grid">
+      <div class="about__label">
+        <p class="eyebrow" data-reveal>(05) — Words</p>
+      </div>
+      <div class="about__body">
+        <div class="quotes" id="quotes">
+
+          <blockquote class="quote is-active" data-quote>
+            <p class="quote__text display">"They killed our favourite idea in week two. The one that replaced it doubled our sign-ups."</p>
+            <div class="quote__who">
+              <span class="quote__avatar" aria-hidden="true">RM</span>
+              <div>
+                <div class="quote__name">Rosa Marchetti</div>
+                <div class="quote__role">Founder, Halcyon Bank</div>
+              </div>
+            </div>
+          </blockquote>
+
+          <blockquote class="quote" data-quote>
+            <p class="quote__text display">"Eleven people who behave like three. Fast, opinionated, and never precious about the work."</p>
+            <div class="quote__who">
+              <span class="quote__avatar" aria-hidden="true">DO</span>
+              <div>
+                <div class="quote__name">Daniel Okonkwo</div>
+                <div class="quote__role">CMO, Meridian Health</div>
+              </div>
+            </div>
+          </blockquote>
+
+          <blockquote class="quote" data-quote>
+            <p class="quote__text display">"We've rebranded three times in twenty years. This is the first one the staff actually defend."</p>
+            <div class="quote__who">
+              <span class="quote__avatar" aria-hidden="true">SN</span>
+              <div>
+                <div class="quote__name">Saoirse Nolan</div>
+                <div class="quote__role">Director, Kiln Ceramics</div>
+              </div>
+            </div>
+          </blockquote>
+
+          <div class="quotes__nav" role="tablist" aria-label="Testimonials">
+            <button class="quotes__dot" type="button" role="tab" aria-selected="true" aria-label="Testimonial 1"></button>
+            <button class="quotes__dot" type="button" role="tab" aria-selected="false" aria-label="Testimonial 2"></button>
+            <button class="quotes__dot" type="button" role="tab" aria-selected="false" aria-label="Testimonial 3"></button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA ---------------------------------------------------------------- -->
+<section class="cta" id="contact">
+  <div class="shell">
+    <p class="eyebrow eyebrow--center" data-reveal>(06) — Say hello</p>
+    <h2 class="cta__title" data-reveal style="--delay:60ms">Let's <em>begin</em></h2>
+    <a class="cta__mail link-u" href="mailto:hello@unfold.studio" data-reveal style="--delay:120ms">hello@unfold.studio</a>
+    <p class="lead" style="margin:2.5rem auto 0" data-reveal>
+      Two project slots left for Q3 2026. Tell us what you're building — a
+      paragraph is plenty.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer ------------------------------------------------------------- -->
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="#top"><span class="brand__mark" aria-hidden="true"></span>Unfold</a>
+        <p style="color:var(--fg-dim);margin-top:1rem;max-width:28ch">
+          An independent creative studio. Lisbon, Berlin and wherever the work is.
+        </p>
+      </div>
+      <div>
+        <h2 class="footer__title">Studio</h2>
+        <ul class="footer__list">
+          <li><a class="link-u" href="#ethos">Ethos</a></li>
+          <li><a class="link-u" href="#services">Services</a></li>
+          <li><a class="link-u" href="#process">Process</a></li>
+          <li><a class="link-u" href="#work">Work</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer__title">Elsewhere</h2>
+        <ul class="footer__list">
+          <li><a class="link-u" href="#contact">Instagram</a></li>
+          <li><a class="link-u" href="#contact">Behance</a></li>
+          <li><a class="link-u" href="#contact">LinkedIn</a></li>
+          <li><a class="link-u" href="#contact">Read.cv</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer__title">Contact</h2>
+        <ul class="footer__list">
+          <li><a class="link-u" href="mailto:hello@unfold.studio">hello@unfold.studio</a></li>
+          <li><a class="link-u" href="mailto:new@unfold.studio">new@unfold.studio</a></li>
+          <li>Rua do Século 12, Lisbon</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>&copy; <span id="year">2026</span> Unfold Studio — Template. Fictional content.</span>
+      <a class="to-top" href="#top">
+        Back to top
+        <svg width="10" height="12" viewBox="0 0 12 14" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M6 13V2M1.5 6.5 6 2l4.5 4.5"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
