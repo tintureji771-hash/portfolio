@@ -7,11 +7,20 @@
   </defs>
   <rect width="1200" height="630" fill="#0b0b0c"/>
   <rect width="1200" height="630" fill="url(#glow)"/>
+
   <rect x="80" y="76" width="14" height="14" rx="2" fill="#c8f169" transform="rotate(45 87 83)"/>
-  <text x="112" y="94" font-family="Times New Roman, serif" font-size="34" fill="#efebe4">Unfold</text>
-  <text x="80" y="330" font-family="Times New Roman, serif" font-size="112" fill="#efebe4">Design that</text>
-  <text x="80" y="440" font-family="Times New Roman, serif" font-size="112" font-style="italic" fill="#c8f169">unfolds</text>
-  <text x="437" y="440" font-family="Times New Roman, serif" font-size="112" fill="#efebe4">slowly.</text>
+  <text x="112" y="94" font-family="Times New Roman, serif" font-size="34" fill="#efebe4">Noa Vega</text>
+
+  <text x="80" y="320" font-family="Times New Roman, serif" font-size="106" fill="#efebe4">Frames that refuse</text>
+  <text x="80" y="424" font-family="Times New Roman, serif" font-size="106" fill="#efebe4">to sit</text>
+  <text x="292" y="424" font-family="Times New Roman, serif" font-size="106" font-style="italic" fill="#c8f169">still.</text>
+
+  <g transform="translate(1010 300)">
+    <circle r="72" fill="none" stroke="#efebe4" stroke-width="2" opacity="0.35"/>
+    <circle r="46" fill="#c8f169"/>
+    <path d="M-12 -18 L20 0 L-12 18 Z" fill="#0b0b0c"/>
+  </g>
+
   <rect x="80" y="514" width="1040" height="1" fill="#26262a"/>
-  <text x="80" y="562" font-family="Helvetica, Arial, sans-serif" font-size="21" letter-spacing="3" fill="#6b6a67">CREATIVE AGENCY &amp; PORTFOLIO TEMPLATE</text>
+  <text x="80" y="562" font-family="Helvetica, Arial, sans-serif" font-size="21" letter-spacing="3" fill="#7d7b76">MOTION DESIGNER &amp; ANIMATOR — 3D · KINETIC TYPE · TITLES</text>
 </svg>

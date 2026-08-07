@@ -364,6 +364,115 @@
   }
 
   /* ------------------------------------------------------------------ *
+   * Toolkit bars — fill on first scroll into view.
+   * ------------------------------------------------------------------ */
+  function initToolkit() {
+    var fills = $$('[data-fill]');
+    if (!fills.length) return;
+
+    function set(el) { el.style.width = (parseInt(el.getAttribute('data-fill'), 10) || 0) + '%'; }
+
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      fills.forEach(set);
+      return;
+    }
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        set(entry.target);
+        io.unobserve(entry.target);
+      });
+    }, { threshold: 0.4 });
+
+    fills.forEach(function (el, i) {
+      el.style.setProperty('--delay', (i * 70) + 'ms');
+      io.observe(el);
+    });
+  }
+
+  /* ------------------------------------------------------------------ *
+   * Showreel modal — focus-trapped, Escape to close, embed injected on
+   * open and torn down on close so the video can't keep playing.
+   * ------------------------------------------------------------------ */
+  function initReel() {
+    var trigger = $('#reelBtn');
+    var modal = $('#reelModal');
+    var frame = $('#reelFrame');
+    var closeBtn = $('#reelClose');
+    if (!trigger || !modal || !frame) return;
+
+    var placeholder = frame.innerHTML;
+    var lastFocus = null;
+
+    function open() {
+      lastFocus = document.activeElement;
+
+      // Set data-embed on #reelBtn to a video URL and it gets embedded here.
+      var src = trigger.getAttribute('data-embed');
+      if (src) {
+        frame.innerHTML = '';
+        var node;
+        if (/\.(mp4|webm|mov)(\?|$)/i.test(src)) {
+          node = document.createElement('video');
+          node.src = src;
+          node.controls = true;
+          node.autoplay = true;
+          node.playsInline = true;
+        } else {
+          node = document.createElement('iframe');
+          node.src = src;
+          node.allow = 'autoplay; fullscreen; picture-in-picture';
+          node.setAttribute('allowfullscreen', '');
+          node.title = 'Showreel 2026';
+        }
+        frame.appendChild(node);
+      }
+
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('is-locked');
+      if (closeBtn) closeBtn.focus();
+    }
+
+    function close() {
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('is-locked');
+      // Restore the placeholder — this also stops playback.
+      window.setTimeout(function () { frame.innerHTML = placeholder; }, 400);
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    trigger.addEventListener('click', open);
+    if (closeBtn) closeBtn.addEventListener('click', close);
+
+    // Click the backdrop (but not the video) to dismiss.
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) close();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (!modal.classList.contains('is-open')) return;
+
+      if (e.key === 'Escape') { close(); return; }
+
+      // Keep focus inside the dialog while it's open.
+      if (e.key === 'Tab') {
+        var focusable = $$('button, a[href], iframe, video, [tabindex]:not([tabindex="-1"])', modal);
+        if (!focusable.length) return;
+        var first = focusable[0];
+        var last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault(); last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault(); first.focus();
+        }
+      }
+    });
+  }
+
+  /* ------------------------------------------------------------------ *
    * Custom cursor — pointer devices only, lerped for weight.
    * ------------------------------------------------------------------ */
   function initCursor() {
@@ -428,7 +537,7 @@
 
     [initPreloader, initTheme, initHeader, initProgress, initMenu, initReveal,
      initCounters, initMarquee, initServices, initFilters, initQuotes,
-     initCursor, initScrollSpy].forEach(function (fn) {
+     initToolkit, initReel, initCursor, initScrollSpy].forEach(function (fn) {
       try { fn(); } catch (err) {
         // One broken module must never take the page down.
         if (window.console) console.error('[unfold]', fn.name, err);
