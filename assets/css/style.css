@@ -946,6 +946,93 @@ h1, h2, h3, h4 {
 .jrn__desc { color: var(--fg-2); font-size: var(--t-sm); }
 
 /* --------------------------------------------------------------------------
+   17b. Brand identity systems
+   Each card is one identity: the mark, its palette, its type pairing.
+   -------------------------------------------------------------------------- */
+.brands {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+.brand-card { display: flex; flex-direction: column; gap: 1.1rem; padding: 0; overflow: hidden; }
+
+/* The mark sits on the client's own colour, so it reads as their identity,
+   not ours. --mark-bg / --mark-fg come from the data. */
+.brand-card__mark {
+  aspect-ratio: 16 / 9;
+  display: grid; place-items: center;
+  background: var(--mark-bg, var(--dark));
+  color: var(--mark-fg, #f7f2e9);
+  position: relative;
+  overflow: hidden;
+}
+.brand-card__mono {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.75rem, 7vw, 4.25rem);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  transition: transform 0.5s var(--ease);
+}
+.brand-card:hover .brand-card__mono { transform: scale(1.06); }
+.brand-card__mark img, .brand-card__mark svg { width: 100%; height: 100%; object-fit: cover; }
+
+/* Faint construction grid — the giveaway that a mark was drawn, not typed. */
+.brand-card__grid {
+  position: absolute; inset: 0;
+  opacity: 0.16;
+  background-image:
+    linear-gradient(currentColor 1px, transparent 1px),
+    linear-gradient(90deg, currentColor 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-position: center;
+  pointer-events: none;
+}
+
+.brand-card__body { padding: 0 clamp(1.25rem, 2.5vw, 1.75rem) clamp(1.25rem, 2.5vw, 1.75rem); display: grid; gap: 0.9rem; }
+.brand-card__head { display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; }
+.brand-card__name { font-family: var(--font-display); font-weight: 700; font-size: var(--t-h4); }
+.brand-card__year { font-size: var(--t-xs); font-weight: 700; color: var(--fg-muted); white-space: nowrap; }
+.brand-card__scope { font-size: var(--t-sm); color: var(--accent-fg); font-weight: 600; margin-top: -0.5rem; }
+.brand-card__note { font-size: var(--t-sm); color: var(--fg-2); }
+
+/* Palette — a real swatch row, with the hex available on hover/focus. */
+.swatches { display: flex; gap: 0.35rem; }
+.swatch {
+  flex: 1;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  position: relative;
+  transition: transform 0.35s var(--ease);
+}
+.brand-card:hover .swatch { transform: translateY(-2px); }
+.swatch::after {
+  content: attr(data-hex);
+  position: absolute; inset-inline: 0; top: calc(100% + 0.35rem);
+  text-align: center;
+  font-family: var(--font-mono); font-size: 0.625rem;
+  color: var(--fg-muted);
+  opacity: 0; transition: opacity 0.3s var(--ease);
+}
+.brand-card:hover .swatch::after { opacity: 1; }
+
+.brand-card__type {
+  display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap;
+  border-top: 1px dashed var(--border);
+  padding-top: 0.9rem;
+}
+.brand-card__type b { font-family: var(--font-display); font-weight: 700; font-size: 1.0625rem; }
+.brand-card__type span { font-family: var(--font-mono); font-size: var(--t-xs); color: var(--fg-muted); }
+
+/* Deliverables strip under the brand grid */
+.deliverables {
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+  justify-content: center;
+  margin-top: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+/* --------------------------------------------------------------------------
    18. Awards
    -------------------------------------------------------------------------- */
 .awards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: clamp(1rem, 2vw, 1.5rem); }

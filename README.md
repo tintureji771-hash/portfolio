@@ -1,21 +1,28 @@
-# Noa Vega — Motion Designer Portfolio
+# Motion & Brand Identity Designer Portfolio
 
-A warm, card-based single-page portfolio for a motion designer / animator.
-Showreel player, animated project previews, tools grid and career journey.
-Zero dependencies, zero build step — three files and a GitHub Actions workflow
-that publishes to GitHub Pages on every push to `main`.
+A warm, card-based single-page portfolio for a designer who works across both
+motion graphics **and** brand identity. Showreel player, animated project
+previews, a brand-systems section with real palettes, tools grid and career
+journey.
+Zero dependencies, zero build step — and **all of your content lives in a single
+file, [`content.js`](content.js)**. A GitHub Actions workflow publishes to
+GitHub Pages on every push to `main`.
 
 Visual direction follows a cream-and-amber personal-portfolio style: a floating
 pill nav, oversized name, badge-annotated portrait, rounded cards and chip labels.
 
 > **The identity is a placeholder.** "Noa Vega", the email addresses, the
-> testimonials and the CV entries are fictional. See
-> [Making it yours](#making-it-yours) for the find-and-replace list.
+> testimonials and the CV entries are fictional. Replace them by editing
+> `content.js` — see [Making it yours](#making-it-yours). You should not need to
+> touch `index.html` at all.
 
 ---
 
 ## Features
 
+- **One file to edit.** Every word, link, project, job, award and quote lives in
+  `content.js`. `index.html` is an empty skeleton that `render.js` fills in —
+  add a project by adding one line to an array, not by copying markup.
 - **No build step.** Plain HTML, CSS and ES2020 — open `index.html` and it works.
 - **Showreel player** — click-to-open modal, focus-trapped, Escape to close, and
   the embed is torn down on close so nothing keeps playing in the background.
@@ -42,9 +49,10 @@ pill nav, oversized name, badge-annotated portrait, rounded cards and chip label
 | — | Hero | Award chip, big name, badge-annotated portrait, review strip |
 | — | Showreel | Animated poster + play button → modal player |
 | — | Marquee | Scrolling software list |
-| — | Work | 6 animated previews, filterable by 3D / 2D / Titles / UI |
+| — | Work | Animated previews, filterable — categories build themselves from the data |
+| — | Identity | Brand systems: mark, palette swatches, type pairing, deliverables |
 | — | About | Portrait card, bio, signature, animated stat counters |
-| — | Services | Four-discipline accordion with icon tiles |
+| — | Services | Discipline accordion with icon tiles |
 | — | Tools | Software cards on a dark panel |
 | — | Journey | Career cards, then awards and process |
 | — | Testimonials | Rotating quotes in a card |
@@ -56,14 +64,20 @@ pill nav, oversized name, badge-annotated portrait, rounded cards and chip label
 
 ```
 .
-├── index.html                     # every section, in source order, commented
+├── content.js                     # ★ ALL your content — the only file you edit
+├── index.html                     # empty skeleton; mount points only
 ├── assets/
 │   ├── css/style.css              # tokens → reset → primitives → components
+│   ├── js/render.js               # builds the page from content.js (icons + artwork live here)
 │   ├── js/main.js                 # one init function per behaviour
 │   └── img/                       # favicon + Open Graph card (SVG)
 ├── .github/workflows/deploy.yml   # GitHub Pages deployment
 └── .nojekyll                      # serve files as-is, don't run Jekyll
 ```
+
+The three scripts load in order — `content.js` → `render.js` → `main.js` — all
+`defer`red, so your data exists before the page is built and the page exists
+before the interactions are wired up.
 
 ---
 
@@ -85,20 +99,17 @@ also works — nothing depends on a server.
 ## Wiring up the showreel
 
 The player opens a modal with a placeholder inside. Point it at a real video by
-adding **`data-embed`** to the `#reelBtn` button in `index.html`:
+filling in `reel.embed` in `content.js`:
 
-```html
-<!-- Vimeo -->
-<button class="reel" id="reelBtn" type="button"
-        data-embed="https://player.vimeo.com/video/76979871?autoplay=1">
-
-<!-- YouTube -->
-<button class="reel" id="reelBtn" type="button"
-        data-embed="https://www.youtube.com/embed/VIDEO_ID?autoplay=1">
-
-<!-- Self-hosted file -->
-<button class="reel" id="reelBtn" type="button"
-        data-embed="assets/video/reel-2026.mp4">
+```js
+reel: {
+  // Vimeo
+  embed: 'https://player.vimeo.com/video/76979871?autoplay=1',
+  // YouTube
+  embed: 'https://www.youtube.com/embed/VIDEO_ID?autoplay=1',
+  // Self-hosted file
+  embed: 'assets/video/reel-2026.mp4'
+}
 ```
 
 Anything ending in `.mp4`, `.webm` or `.mov` is injected as a `<video>` element
@@ -139,33 +150,96 @@ Add a file named `CNAME` at the repo root containing your domain
 
 ## Making it yours
 
-Start with the identity — three global find-and-replaces cover most of it:
+**Open `content.js` and work top to bottom.** It's one plain JavaScript object,
+commented throughout, and it holds every piece of content on the page. Save,
+reload, done — no build, no other file to touch.
 
-| Find | Replace with |
+```js
+profile: {
+  name: 'Noa Vega',
+  initials: 'NV',                // the logo mark; leave blank to auto-generate
+  role: 'Motion Designer & Animator',
+  email: 'hey@noavega.tv',
+  location: 'Barcelona — CET'
+}
+```
+
+Three conventions are worth knowing:
+
+| Convention | What it does |
 | --- | --- |
-| `Noa Vega` | your name |
-| `hey@noavega.tv` | your email |
-| `Barcelona` | your city |
+| `*stars*` in a heading | Renders that part in the accent colour — `'My *Recent Work*'` |
+| `icon: 'trophy'` | Picks from the icon library in `render.js` (`star`, `dot`, `square`, `play`, `layers`, `stack`, `type`, `frame`, `phone`, `screen`, `trophy`, `camera`, `code`, `pen`, `sparkle`, `globe`, `mail`, `link`, `vimeo`, `instagram`, `behance`, `linkedin`, `github`, `dribbble`, `youtube`, `x`) |
+| `image: ''` | Keeps the built-in placeholder artwork; set a path to use your own photo |
 
-Then the rest:
+### Common edits
+
+| What you want | What to change in `content.js` |
+| --- | --- |
+| Your name, email, city | `profile` |
+| Tab title, description, social card | `meta` |
+| Nav links, header button | `nav`, `header.cta` |
+| Social icons (header **and** footer) | `socials` — the footer reuses this list via `from: 'socials'`, and `from: 'contact'` reuses your email and city |
+| Add a project | One more object in `work.projects`. `category` builds the filter buttons automatically; `wide: true` makes it full-bleed; `art` picks the animated placeholder or set `image` to your own thumbnail |
+| Add a brand identity | One more object in `identity.items` — see [Brand identity cards](#brand-identity-cards) |
+| Add a job, award, service, quote, tool, process step | One more object in the matching array |
+| Stat counters | `about.stats` — `value` counts up, `suffix` is the little superscript |
+| Showreel video | `reel.embed` — see [Wiring up the showreel](#wiring-up-the-showreel) |
+| Portraits | `hero.image` and `about.image` |
+| Remove a whole section | Set it to `null` (e.g. `awards: null`) or empty its `items` — the section deletes itself. Drop its `nav` entry too |
+
+Styling still lives in CSS, and the two are independent:
 
 | What | Where |
 | --- | --- |
 | Colours, fonts, spacing, motion | The `:root` token block at the top of `assets/css/style.css` |
 | Dark theme | The `:root[data-theme="dark"]` block just below it |
-| Accent colour | `--accent` (fills) and `--accent-fg` (accent-coloured text) — also update the `#f0a32c` fills in the inline SVGs |
-| Copy, sections, nav | `index.html` — sections are commented and in source order |
-| Showreel | See [Wiring up the showreel](#wiring-up-the-showreel) |
-| Projects | The `<article class="project">` blocks in `#workGrid`. `data-cat` drives the filters; `project--wide` makes a card full-bleed |
-| Real thumbnails | Replace a `<svg class="project__canvas">` with `<img class="project__canvas" src="…" alt="…">`, or a muted autoplay `<video>` — the CSS covers all three |
-| Stats | `data-count` and `data-suffix` on the `.stat__num` elements |
-| Tools | The `.tool` blocks in `#tools` — `tool__ico` takes an inline brand colour |
-| Journey | The `.card` blocks in `#journey`; awards and process below it |
-| Portrait | The `<svg>` inside `.portrait` and `.about__media` — swap for `<img src="…" alt="…">` |
-| Meta / social card | The `<head>` of `index.html` and `assets/img/og.svg` |
+| Accent colour | `--accent` (fills) and `--accent-fg` (accent-coloured text) — also the `#f0a32c` fills in the artwork inside `render.js` |
+| New icons or placeholder artwork | The `ICONS` and `ART` blocks near the top of `assets/js/render.js`; name your addition in `content.js` |
+| Social card image | `assets/img/og.svg` |
 
-To add a filter category, add a `.filter` button with a new `data-filter` value
-and set the matching `data-cat` on the projects. No JS changes needed.
+### Brand identity cards
+
+The Identity section is for the static half of the work — one card per brand
+system, each showing the mark, its palette and its type pairing:
+
+```js
+{
+  name: 'Meridian',
+  year: '2026',
+  scope: 'Visual identity · Motion system',
+  monogram: 'M',                 // or image: 'assets/img/meridian-mark.svg'
+  color: '#0f2f2b',              // the tile the mark sits on
+  markColor: '#f5e9d0',          // the mark itself
+  palette: ['#0f2f2b', '#f0a32c', '#f5e9d0', '#c96a3b'],  // any number
+  type: 'Outfit / Source Serif',
+  typeNote: 'Display + editorial',
+  note: 'One or two sentences on the thinking.'
+}
+```
+
+Hex codes appear under the swatches on hover, and the whole palette is exposed
+to screen readers as one labelled image. `identity.deliverables` is the chip
+row underneath — what a client actually receives.
+
+Set `identity: null` to drop the section entirely (and remove its `nav` entry).
+
+### Project preview artwork
+
+With no `image`, a project uses one of the built-in animated SVGs — six tuned
+for motion work, four for branding:
+
+| Motion | | Branding | |
+| --- | --- | --- | --- |
+| `bars` | type/equaliser blocks | `mark` | logo on a construction grid |
+| `orbit` | 3D orbit rings | `palette` | colour swatch columns |
+| `titles` | title cards + scanline | `wordmark` | letterforms on baseline guides |
+| `fluid` | simulation contours | `stationery` | cards and print collateral |
+| `ui` | phone UI stack | | |
+| `ident` | brand ident orbit | | |
+
+Omit `art` and one is picked by position. Add your own in the `ART` block of
+`assets/js/render.js`.
 
 ### Animating your own previews
 
