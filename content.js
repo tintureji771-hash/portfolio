@@ -2,7 +2,7 @@
    ★ THIS IS THE ONLY FILE YOU NEED TO EDIT ★
 
    Everything on the page — text, links, projects, brand systems, jobs,
-   awards, quotes — comes from the object below. Change a value, save,
+   education, quotes — comes from the object below. Change a value, save,
    reload. Nothing else.
 
    Three small conventions:
@@ -23,12 +23,12 @@ window.SITE = {
   /* ---------- browser tab, search results, social previews ------------- */
   meta: {
     lang: "en",
-    title: "Tintu Reji — Motion & Brand Identity Designer",
+    title: "Tintu C Reji — Brand Guidelines & Visual Designer",
     description:
-      "Tintu Reji is a freelance motion designer and brand identity designer — logos, visual identity systems and the animation that brings them to life.",
+      "Tintu C Reji is a brand guidelines designer and visual designer based in Kerala, India — brand identity systems, guideline documents, editorial layout and motion graphics.",
     ogTitle: "", // blank = reuse title
     ogDescription:
-      "Motion designer and brand identity designer. Identity systems, logo animation, 3D and kinetic type.",
+      "Brand guidelines designer and visual designer. Identity systems, guideline documentation, editorial layout and motion graphics.",
     ogImage: "assets/img/og.svg",
     favicon: "assets/img/favicon.svg",
     url: "",
@@ -36,21 +36,22 @@ window.SITE = {
 
   /* ---------- who you are (used all over the page) --------------------- */
   profile: {
-    name: "Tintu Reji",
+    name: "Tintu C Reji",
     initials: "TR", // the little logo mark; blank = auto
-    role: "Motion & Brand Identity Designer",
-    email: "hey@noavega.tv", // ← your real address
-    location: "Barcelona — CET", // ← your city and timezone
+    role: "Brand Guidelines Designer · Visual Designer",
+    email: "tintureji@gmail.com",
+    location: "Kerala, India — IST",
   },
 
   /* ---------- navigation ----------------------------------------------- */
   nav: [
     { label: "Reel", href: "#reel" },
     { label: "Work", href: "#work" },
-    { label: "Identity", href: "#identity" },
+    { label: "Projects", href: "#identity" },
     { label: "About", href: "#about" },
     { label: "Services", href: "#services" },
-    { label: "Journey", href: "#journey" },
+    { label: "Experience", href: "#journey" },
+    { label: "Education", href: "#awards" },
     { label: "Contact", href: "#contact" },
   ],
 
@@ -60,64 +61,70 @@ window.SITE = {
 
   /* ---------- social links (header + footer) --------------------------- */
   socials: [
-    { label: "Behance", icon: "behance", href: "#contact" },
-    { label: "Instagram", icon: "instagram", href: "#contact" },
-    { label: "Vimeo", icon: "vimeo", href: "#contact" },
-    { label: "LinkedIn", icon: "linkedin", href: "#contact" },
+    { label: "Behance", icon: "behance", href: "https://www.behance.net/tintucreji" },
+    { label: "LinkedIn", icon: "linkedin", href: "https://www.linkedin.com/in/tintu-reji/" },
+    { label: "Email", icon: "mail", href: "mailto:tintureji@gmail.com" },
   ],
 
   /* ---------- hero ------------------------------------------------------ */
   hero: {
-    chip: "Motion & Brand Identity Designer",
+    chip: "Brand Identity & Systems",
     chipIcon: "star",
-    heading: "I'm *Tintu Reji*",
+    heading: "I'm *Tintu C Reji*",
     intro:
-      "I build brand identities and then make them move — logos, type and colour systems designed to work standing still and at 24 frames a second.",
+      "I design brand identities and the guideline systems that keep them consistent — logo usage, clear space, colour, typography and layout rules documented so any team can apply them without me in the room.",
     image: "", // e.g. 'assets/img/portrait.jpg'
-    floats: ["Identity Systems", "Logo & Marks", "3D & Motion", "Kinetic Type"],
-    seal: "Brand & Motion Design · Since 2016", // '' removes the spinning badge
+    floats: ["Brand Guidelines", "Identity Systems", "Editorial Layout", "Motion Graphics"],
+    seal: "Brand Guidelines · Visual Identity · Systems", // '' removes the spinning badge
     buttons: [
       { label: "View Portfolio", href: "#work" },
       { label: "Hire Me", href: "#contact", dark: true },
     ],
-    socialsLabel: "Follow me on",
+    socialsLabel: "Find me on",
     reviews: {
       // null removes the whole block
-      count: "40+ Brands",
-      note: "identities designed, animated and shipped",
+      count: "75-page",
+      note: "brand guideline system documented end to end",
       rating: "", // e.g. '4.9 of 5' — adds the five-star row; blank hides it
-      faces: [], // [] = auto from testimonials initials
+      faces: ["GS", "RZ", "NZ"], // [] = auto from testimonials initials
     },
   },
 
   /* ---------- scrolling strip ------------------------------------------ */
   marquee: [
-    "Brand Identity",
-    "Logo & Wordmarks",
     "Brand Guidelines",
-    "Kinetic Typography",
-    "3D & CGI",
-    "Title Sequences",
-    "Packaging",
-    "Motion Systems",
+    "Brand Identity Systems",
+    "Logo Usage & Clear Space",
+    "Typography & Editorial Layout",
+    "Grid & Layout Systems",
+    "Visual Hierarchy",
+    "Presentation Design",
+    "Motion Graphics",
   ],
 
-  /* ---------- showreel -------------------------------------------------- */
+  /* ---------- showreel --------------------------------------------------
+     Paste a Vimeo/YouTube embed URL or an .mp4 path into `embed` and the
+     modal plays it. Left blank for now — the section still shows.
+     ---------------------------------------------------------------------- */
   reel: {
-    chip: "Showreel 2026",
+    chip: "Watch — Nizhalattam",
     chipIcon: "play",
-    title: "Ninety Seconds, *No Filler*",
+    title: "A Documentary on *Shadow Puppetry*",
     intro:
-      "A cut of the last eighteen months — identity launches, logo builds, campaign work and two things that never aired.",
-    // Paste a Vimeo/YouTube embed URL or an .mp4 path — it opens in the modal.
-    embed: "",
+      "Nizhalattam — title identity and animated title sequence for a documentary on traditional shadow puppetry, from concept development through to final execution.",
+    // Vimeo/YouTube *embed* URL or an .mp4 path.
+    //   • must be the /embed/ form — a youtu.be or /watch?v= link will not
+    //     load in an iframe, YouTube blocks it
+    //   • autoplay=1 starts it when the modal opens, rel=0 keeps the
+    //     end-screen suggestions to this channel
+    embed: "https://www.youtube.com/embed/xu-XLWYgO-g?autoplay=1&rel=0",
     meta: [
-      "01:32 · 4K · Stereo",
-      "Illustrator · After Effects · Cinema 4D",
+      "Title Design · Motion Graphics",
+      "After Effects · Premiere Pro · Illustrator",
     ],
   },
 
-  /* ---------- portfolio -------------------------------------------------
+  /* ---------- portfolio grid --------------------------------------------
      The filter buttons build themselves from the `category` values below,
      in the order they first appear. `wide: true` makes a project span the
      full row. `art` picks the built-in animated artwork:
@@ -128,156 +135,141 @@ window.SITE = {
   work: {
     chip: "My Portfolio",
     chipIcon: "square",
-    title: "Identity, and How It *Moves*",
+    title: "Identity, Layout *and Motion*",
     allLabel: "All",
     projects: [
       {
-        name: "Meridian — Full Identity",
-        meta: "Identity · Motion — 2026",
-        category: "Identity",
+        name: "Green Square — Brand Guidelines & Visual Identity",
+        meta: "Brand Identity · Guidelines — 2026",
+        category: "Brand Identity",
         art: "mark",
         wide: true,
-        href: "#work",
-        image: "",
+        href: "https://www.behance.net/gallery/252894607/Brand-Book-Green-Square",
+        cta: "View on Behance",
+        // Save the file into assets/img/ — until it exists you just see the
+        // built-in artwork, no broken image.
+        image: "assets/img/green-square-cover.jpg",
       },
       {
-        name: "Fold — Wordmark & Rebrand",
-        meta: "Identity — 2025",
-        category: "Identity",
-        art: "wordmark",
-        href: "#work",
-        image: "",
-      },
-      {
-        name: "Sabbia — Palette & Packaging",
-        meta: "Branding · Print — 2025",
-        category: "Branding",
-        art: "palette",
-        href: "#work",
-        image: "",
-      },
-      {
-        name: "Nova — Kinetic Campaign",
-        meta: "2D · Type — 2026",
-        category: "2D",
-        art: "bars",
-        href: "#work",
-        image: "",
-      },
-      {
-        name: "Aurora — Product Loop",
-        meta: "3D — 2026",
-        category: "3D",
-        art: "orbit",
-        href: "#work",
-        image: "",
-      },
-      {
-        name: "Signal — Title Sequence",
-        meta: "Titles — 2025",
-        category: "Titles",
-        art: "titles",
-        href: "#work",
-        image: "",
-      },
-      {
-        name: "Küpe — Stationery System",
-        meta: "Branding · Print — 2024",
+        name: "Green Square — Packaging & Applications",
+        meta: "Branding · Packaging — 2026",
         category: "Branding",
         art: "stationery",
-        href: "#work",
-        image: "",
+        href: "https://www.behance.net/gallery/252894607/Brand-Book-Green-Square",
+        cta: "View on Behance",
+        image: "assets/img/green-square-packaging.jpg",
       },
       {
-        name: "Tempo — UI Motion System",
-        meta: "UI · Lottie — 2025",
-        category: "UI",
-        art: "ui",
-        href: "#work",
-        image: "",
+        name: "Green Square — Colour & Type System",
+        meta: "Branding · Systems — 2026",
+        category: "Branding",
+        art: "palette",
+        href: "https://www.behance.net/gallery/252894607/Brand-Book-Green-Square",
+        cta: "View on Behance",
+        image: "assets/img/green-square-palette.jpg",
       },
       {
-        name: "Orbit — Brand Ident",
-        meta: "Identity · Motion — 2024",
-        category: "Identity",
-        art: "ident",
-        href: "#work",
+        name: "Reelz — Film Magazine",
+        meta: "Editorial · Print — Academic",
+        category: "Editorial",
+        art: "wordmark",
+        href: "https://www.behance.net/gallery/250105911/Magazine-Project-College-Project",
+        cta: "View on Behance",
+        image: "assets/img/reelz-cover.jpg",
+      },
+      {
+        name: "Nizhalattam — Documentary Titles",
+        meta: "Title Design · Motion — Academic",
+        category: "Motion",
+        art: "titles",
+        href: "https://youtu.be/xu-XLWYgO-g",
+        cta: "Watch on YouTube",
+        // YouTube serves this thumbnail publicly — no download needed.
+        image: "https://img.youtube.com/vi/xu-XLWYgO-g/maxresdefault.jpg",
+      },
+      {
+        name: "Branded Video & Multimedia Content",
+        meta: "Motion Graphics — 2024/25",
+        category: "Motion",
+        art: "bars",
+        href: "#reel",
+        cta: "Watch",
         image: "",
       },
     ],
   },
 
-  /* ---------- brand identity systems -------------------------------------
-     One card per identity: the mark, the palette, the type pairing.
+  /* ---------- selected projects ------------------------------------------
+     One card per project: the mark, the palette, the type pairing.
        monogram  — the letters shown on the coloured tile (or set `image`)
        color     — the tile background; markColor is the mark itself
        palette   — any number of hex values; hover reveals the codes
+     ⚠ The hex values and type pairings below are indicative — swap them for
+       the exact ones from each project file.
      ---------------------------------------------------------------------- */
   identity: {
-    chip: "Brand & Identity",
+    chip: "Selected Projects",
     chipIcon: "palette",
     title: "Systems, Not Just *Logos*",
     intro:
-      "Every identity ships as a working kit: marks, palette, type scale, motion rules and a guideline doc your team can use without me in the room.",
+      "Every identity ships as a working kit: logo suite, clear-space and minimum-size rules, colour and type systems, layout principles and a guideline document a team can actually implement.",
     items: [
       {
-        name: "Meridian",
+        name: "Green Square",
         year: "2026",
-        scope: "Visual identity · Motion system",
-        monogram: "M",
-        color: "#0f2f2b",
+        scope: "Brand guidelines · Visual identity",
+        monogram: "GS",
+        // Set `image` to replace the monogram tile with a real logo shot.
+        image: "assets/img/green-square-mark.jpg",
+        color: "#1f4d2e",
         markColor: "#f5e9d0",
-        palette: ["#0f2f2b", "#f0a32c", "#f5e9d0", "#c96a3b"],
-        type: "Outfit / Source Serif",
-        typeNote: "Display + editorial",
-        note: "A navigation brand for a shipping-logistics platform. The mark is a compass rose that unfolds into a route line on load.",
+        palette: ["#1f4d2e", "#8bb174", "#f5e9d0", "#c96a3b"],
+        type: "Display + editorial pairing",
+        typeNote: "Retail & packaging",
+        href: "https://www.behance.net/gallery/252894607/Brand-Book-Green-Square",
+        linkLabel: "View the brand book",
+        note: "A 75-page brand guideline system for an urban organic and healthy food retail brand — primary and secondary logo systems, clear-space and minimum-size rules, colour palette, typography hierarchy, imagery direction and tone of voice, extended across packaging, uniforms, signage, delivery vehicles, kiosks, websites, apps and advertising.",
       },
       {
-        name: "Fold Studio",
-        year: "2025",
-        scope: "Rebrand · Wordmark",
-        monogram: "FS",
+        name: "Reelz",
+        year: "Academic project",
+        scope: "Film magazine · Editorial design",
+        monogram: "RZ",
+        image: "assets/img/reelz-cover.jpg",
         color: "#1b1815",
         markColor: "#f0a32c",
         palette: ["#1b1815", "#f0a32c", "#f7f2e9", "#6b7f6e"],
-        type: "Söhne / Reckless",
-        typeNote: "Grotesk + contrast serif",
-        note: "Ten years of studio work under one wordmark, with a folding ligature that animates between the two Fs.",
+        type: "Editorial serif + grotesk",
+        typeNote: "Print-first magazine",
+        href: "https://www.behance.net/gallery/250105911/Magazine-Project-College-Project",
+        linkLabel: "View on Behance",
+        note: "A film-focused magazine — cover design, contents pages, feature layouts, biographical content, film history and awards sections — built on editorial design principles, grid systems, typographic hierarchy and page-to-page visual consistency.",
       },
       {
-        name: "Sabbia",
-        year: "2025",
-        scope: "Identity · Packaging",
-        monogram: "SB",
-        color: "#e5d3b3",
-        markColor: "#2f2418",
-        palette: ["#e5d3b3", "#2f2418", "#c96a3b", "#8a9a7b"],
-        type: "GT Alpina / Suisse",
-        typeNote: "Serif-led, print first",
-        note: "A ceramics label built for the shelf first: warm neutrals, a hand-cut mark, and a label system that scales from a mug to a crate.",
-      },
-      {
-        name: "Tempo",
-        year: "2024",
-        scope: "Product identity · Motion specs",
-        monogram: "T",
-        color: "#141b2d",
-        markColor: "#7cc6ff",
-        palette: ["#141b2d", "#7cc6ff", "#f7f2e9", "#f0a32c"],
-        type: "Inter / JetBrains Mono",
-        typeNote: "Product + code",
-        note: "An app identity handed to engineering as tokens and Lottie files, not a PDF — the motion rules ship with the colour ones.",
+        name: "Nizhalattam",
+        year: "Academic project",
+        scope: "Title identity · Motion",
+        monogram: "NZ",
+        image: "https://img.youtube.com/vi/xu-XLWYgO-g/maxresdefault.jpg",
+        color: "#2f2418",
+        markColor: "#e5d3b3",
+        palette: ["#2f2418", "#e5d3b3", "#c96a3b", "#8a9a7b"],
+        type: "Cultural display type",
+        typeNote: "Documentary titles",
+        href: "https://youtu.be/xu-XLWYgO-g",
+        linkLabel: "Watch on YouTube",
+        note: "Title identity and animated title sequence for a documentary on traditional shadow puppetry — cultural references, typography, motion and composition carried from concept development through to final execution.",
       },
     ],
     deliverables: [
       "Logo & mark suite",
+      "Clear space & minimum sizes",
       "Colour system",
-      "Type scale",
-      "Brand guidelines",
-      "Motion principles",
-      "Social & ad templates",
-      "Packaging",
-      "Design tokens",
+      "Typography hierarchy",
+      "Grid & layout systems",
+      "Imagery direction & tone of voice",
+      "Packaging & signage",
+      "Presentation & social templates",
     ],
   },
 
@@ -285,118 +277,85 @@ window.SITE = {
   about: {
     chip: "About Me",
     chipIcon: "dot",
-    title: "Who is *Tintu Reji?*",
+    title: "Who is *Tintu C Reji?*",
     image: "", // e.g. 'assets/img/about.jpg'
     paragraphs: [
-      "I started in a broadcast basement cutting promos, then spent years on the other side of the brief — drawing the logos and building the systems the animation was meant to serve. I do both now, which is the point: an identity that was never tested in motion tends to fall apart the first time it has to move.",
-      "A typical project runs from naming support and mark exploration through to the guideline doc, the launch film and the templates your team uses on a Tuesday. Illustrator and Figma for the static half, After Effects and Cinema 4D for the moving half.",
+      "I'm a detail-oriented brand and visual designer currently working as a freelancer, with over two years of combined industry and academic experience across brand identity, brand guidelines, visual communication, motion graphics, editorial layout and multimedia design.",
+      "Most of my work is translating brand concepts into structured visual systems — comprehensive guideline documents, presentation layouts, digital assets and branded applications across multiple touchpoints. Typography, visual hierarchy, layout systems and brand consistency are the parts I care about most. Illustrator, Photoshop, After Effects and Premiere Pro daily, with InDesign and Figma alongside them.",
     ],
-    signature: "Tintu Reji", // handwritten-style sign-off
+    signature: "Tintu C Reji", // handwritten-style sign-off
     badge: {
-      title: "10 years",
-      note: "branding & motion for studios",
+      title: "2+ years",
+      note: "brand, visual & motion design",
       icon: "star",
     },
     stats: [
-      { value: 10, suffix: "+", label: "Years designing" },
-      { value: 40, suffix: "+", label: "Identities shipped" },
-      { value: 230, suffix: "+", label: "Spots delivered" },
+      { value: 2, suffix: "+", label: "Years of experience" },
+      { value: 75, suffix: "-page", label: "Brand guideline system" },
+      { value: 6, suffix: "", label: "Design tools in daily use" },
     ],
-    button: { label: "Download CV", href: "#contact", icon: "download" },
+    button: { label: "Get in Touch", href: "#contact", icon: "mail" },
   },
 
   /* ---------- tools ------------------------------------------------------ */
   tools: {
-    chip: "My Favourite Tools",
+    chip: "My Toolkit",
     chipIcon: "square",
-    title: "Exploring the Tools *Behind My Work*",
+    title: "The Software *Behind My Work*",
     items: [
       { abbr: "Ai", name: "Illustrator", note: "Marks & type", color: "#310000" },
-      {
-        abbr: "Fig",
-        name: "Figma",
-        note: "Systems & handover",
-        color: "#0acf83",
-      },
-      {
-        abbr: "Ae",
-        name: "After Effects",
-        note: "Daily driver",
-        color: "#00005b",
-      },
-      {
-        abbr: "C4D",
-        name: "Cinema 4D",
-        note: "Modelling & lighting",
-        color: "#0d2b45",
-      },
-      { abbr: "Id", name: "InDesign", note: "Guidelines & print", color: "#49021f" },
       { abbr: "Ps", name: "Photoshop", note: "Retouch & mockups", color: "#001e36" },
-      { abbr: "Rs", name: "Redshift", note: "Rendering", color: "#b31b1b" },
-      { abbr: "Hou", name: "Houdini", note: "Simulation", color: "#ff4713" },
-      {
-        abbr: "Bl",
-        name: "Blender",
-        note: "Quick turnarounds",
-        color: "#e87d0d",
-      },
-      {
-        abbr: "Lot",
-        name: "Lottie",
-        note: "UI handover",
-        color: "#1a1a1a",
-      },
+      { abbr: "Ae", name: "After Effects", note: "Motion graphics", color: "#00005b" },
+      { abbr: "Pr", name: "Premiere Pro", note: "Video editing", color: "#2a0634" },
+      { abbr: "Id", name: "InDesign", note: "Guidelines & print", color: "#49021f" },
+      { abbr: "Fig", name: "Figma", note: "Layouts & handover", color: "#0acf83" },
+      { abbr: "PPT", name: "PowerPoint", note: "Presentation design", color: "#b7472a" },
     ],
   },
 
   /* ---------- services (accordion) --------------------------------------- */
   services: {
-    chip: "My Services",
+    chip: "What I Do",
     chipIcon: "star",
-    title: "How I Bring *Ideas to Life*",
+    title: "How I Bring *Brands to Life*",
     intro:
-      "Day rate, fixed project fee, or a full identity package. Strategy and sketches always come before a single keyframe.",
+      "Available for freelance projects, onsite or remote — from a single mark to a full guideline document.",
     items: [
+      {
+        name: "Brand Guidelines Development",
+        icon: "book",
+        text: "Structured guideline documents covering logo usage, clear space, minimum sizes, correct and incorrect applications, colour systems, typography, visual hierarchy, imagery and tone of voice — organised so complex brand information stays clear and implementation-ready.",
+        tags: ["Guideline documents", "Logo usage rules", "Design system documentation", "Brand governance"],
+      },
       {
         name: "Brand Identity Systems",
         icon: "grid",
-        text: "The whole kit: positioning workshop, mark exploration, colour and type systems, art direction and a guideline document that stays useful after handover. Built to survive a marketing team, not just a portfolio shot.",
-        tags: [
-          "Identity design",
-          "Art direction",
-          "Guidelines",
-          "Design tokens",
-        ],
+        text: "Primary and secondary logo systems, colour palettes, typeface guidelines and visual identity application — built as a system so the brand holds together across every touchpoint rather than one hero lock-up.",
+        tags: ["Identity design", "Logo systems", "Colour & typeface guidelines", "Brand consistency"],
       },
       {
-        name: "Logos, Marks & Wordmarks",
-        icon: "pen",
-        text: "Drawn, not generated — construction grids, optical corrections and a size range tested from favicon to building signage. Delivered with responsive lock-ups and every file format your printer will ask for.",
-        tags: ["Logo design", "Wordmarks", "Monograms", "Lock-ups"],
-      },
-      {
-        name: "Brand in Motion",
-        icon: "compass",
-        text: "The bridge between the two halves of my work: logo animation, brand idents and documented motion principles — easing, duration and choreography rules that make everything your brand does feel like the same brand.",
-        tags: ["Logo animation", "Idents", "Motion principles", "Launch films"],
-      },
-      {
-        name: "3D & CGI",
-        icon: "layers",
-        text: "Product loops, abstract environments and simulation work — modelled, lit and rendered in-house. Redshift for beauty, Houdini when physics has to do the acting.",
-        tags: ["Cinema 4D", "Houdini", "Redshift", "Lookdev"],
-      },
-      {
-        name: "Kinetic Typography",
+        name: "Typography & Editorial Layout",
         icon: "type",
-        text: "Type that carries the message instead of decorating it. Social cutdowns, campaign beds and lyric work — built to survive being muted and watched at 20% screen size.",
-        tags: ["After Effects", "Type design", "Social cutdowns", "Captions"],
+        text: "Grid and layout systems, typographic hierarchy, image placement and page-to-page consistency for magazines, reports and long-form documents — editorial precision applied to whatever the format asks for.",
+        tags: ["Grid systems", "Typography", "Editorial design", "Print layout"],
       },
       {
-        name: "Collateral & Packaging",
-        icon: "book",
-        text: "Where an identity actually meets people: packaging, stationery, decks, signage and social templates — set up as editable master files so your team can keep shipping without re-hiring me for every asset.",
-        tags: ["Packaging", "Print", "Templates", "Artwork"],
+        name: "Branded Applications & Collateral",
+        icon: "layers",
+        text: "Identities adapted across digital, print, packaging, signage, environmental graphics, merchandise, websites, mobile, social and advertising — plus mock-ups and marketing materials in Illustrator, Photoshop, InDesign and Figma.",
+        tags: ["Packaging", "Signage", "Social & ad templates", "Mock-ups"],
+      },
+      {
+        name: "Presentation & Digital Design",
+        icon: "screen",
+        text: "Presentation layouts, decks, digital assets and social media creatives built on the same grid and type discipline as the rest of the identity, so a slide looks like it came from the same brand as the packaging.",
+        tags: ["Presentation design", "Decks", "Digital assets", "Social creatives"],
+      },
+      {
+        name: "Motion Graphics & Video",
+        icon: "play",
+        text: "Motion graphics, branded videos, animations, transitions and title sequences — plus video editing, green-screen compositing, voice-over synchronisation and integration of 2D and 3D elements for multimedia and e-learning content.",
+        tags: ["After Effects", "Premiere Pro", "Title sequences", "Compositing"],
       },
     ],
   },
@@ -405,59 +364,53 @@ window.SITE = {
   journey: {
     chip: "Experience",
     chipIcon: "square",
-    title: "My Award-Winning *Design Journey*",
-    intro: "Full CV on request — it has more logos and fewer opinions.",
+    title: "My *Design Journey*",
+    intro: "Freelance today, teaching yesterday, production before that.",
     items: [
       {
-        when: "2022 — Now",
-        role: "Freelance Brand & Motion Designer",
-        where: "Independent — Barcelona & remote",
-        text: "Direct-to-brand and studio overflow work. Identity systems, launch films and campaigns across Europe and the US, usually as the only designer on the job.",
+        when: "Apr 2026 — Now",
+        role: "Freelance Brand and Visual Designer",
+        where: "Self-Employed — Remote",
+        text: "Brand identities, visual guidelines, presentation layouts, social media creatives and branded applications for independent and portfolio-based projects. Structured guideline documents covering logo usage, clear space, colour, typography, hierarchy, imagery and tone of voice, adapted across digital, print, packaging, signage and environmental graphics — from first concept through client feedback to final polished deliverables.",
       },
       {
-        when: "2019 — 2022",
-        role: "Senior Designer — Brand & Motion",
-        where: "Fold Studio — Berlin",
-        text: "Led identity and motion on rebrands for fintech and music clients. Built the studio's guideline template and its 3D pipeline, and mentored two juniors into mid-weights.",
+        when: "Jun 2025 — Mar 2026",
+        role: "Assistant Professor — Motion Graphics & Visual Communication",
+        where: "Chetana College of Media and Performing Arts — Kerala",
+        text: "Taught motion graphics, visual communication, graphic design, advertising design, animation principles, video editing and multimedia production to undergraduates. Built industry-oriented assignments around branding, visual identity, layout and portfolio development, and guided students in turning creative concepts into consistent visual systems.",
       },
       {
-        when: "2017 — 2019",
-        role: "Motion & Graphic Designer",
-        where: "Northlight — London",
-        text: "Broadcast idents, sports packages and channel branding — plus a lot of very fast social cutdowns. Learned to animate to a deadline measured in hours.",
-      },
-      {
-        when: "2016 — 2017",
-        role: "Junior Editor & Animator",
-        where: "Canal Vint-i-U — Barcelona",
-        text: "Regional broadcast. Cut promos overnight, built the lower-third system, and discovered design was the part I actually wanted.",
+        when: "Feb 2024 — Jun 2025",
+        role: "Motion Graphics Designer",
+        where: "Maieutic Edutech Pvt. Ltd. — Bengaluru",
+        text: "Motion graphics, branded videos, visual assets and multimedia content for clients including Dayananda Sagar University, Coursera and the National Instructional Media Institute. Applied established brand elements consistently across digital content, and worked with creative teams, content developers and subject-matter experts to turn information into clear visual narratives.",
       },
     ],
   },
 
-  /* ---------- awards ------------------------------------------------------ */
+  /* ---------- education & recognition -------------------------------------- */
   awards: {
-    chip: "Recognition",
+    chip: "Education",
     chipIcon: "star",
-    title: "Awards & *Mentions*",
+    title: "Study & *Recognition*",
     items: [
       {
-        year: "2026",
-        name: "Brand Impact — Shortlist",
-        icon: "tag",
-        text: "Visual identity of the year for *Meridian*, shortlisted in Transport & Logistics.",
-      },
-      {
-        year: "2025",
-        name: "Motion Awards — Gold",
+        year: "2023",
+        name: "Master of Arts in Multimedia",
         icon: "trophy",
-        text: "Best Title Sequence for *Signal*, judged across 900+ entries.",
+        text: "*University of Calicut* — Second Rank Holder. Graphic design, visual communication, animation, video production, branding and multimedia design.",
       },
       {
-        year: "2024",
-        name: "Site of the Day",
-        icon: "stack",
-        text: "Awwwards SOTD for the *Orbit* ident microsite and its motion system.",
+        year: "2021",
+        name: "BSc Mathematics",
+        icon: "book",
+        text: "*University of Calicut* — bachelor's degree, and where the structural thinking behind the grid systems started.",
+      },
+      {
+        year: "Languages",
+        name: "English & Malayalam",
+        icon: "globe",
+        text: "Fluent in both, working comfortably with *remote and onsite* teams.",
       },
     ],
   },
@@ -469,56 +422,58 @@ window.SITE = {
     title: "The Way *I Work*",
     steps: [
       {
-        title: "Discover",
-        text: "Who you're for, who you're against, and where this has to live. Audit and reference boards before anything gets drawn.",
+        title: "Understand",
+        text: "Requirements first — who the brand is for, where it has to live, and which touchpoints it needs to survive. References and audit before anything gets drawn.",
       },
       {
-        title: "Direction",
-        text: "Two or three routes as real applications — never a logo floating on white. We pick one and I say why.",
+        title: "Concept",
+        text: "Mark exploration and visual direction presented as real applications, not a logo on white, so the decision is made against how it will actually be used.",
       },
       {
-        title: "Build & Animate",
-        text: "Mark, palette, type and motion resolved together. Weekly WIPs, so you see it move long before it's finished.",
+        title: "Systemise",
+        text: "Logo suite, colour, typography, grid and layout rules resolved together, then documented — clear space, minimum sizes, correct and incorrect usage.",
       },
       {
         title: "Hand Over",
-        text: "Guidelines, master files, templates and every export you need, plus a handover call with your team.",
+        text: "The guideline document, organised source files, reusable assets and final deliverables, so your team can keep applying the brand consistently.",
       },
     ],
   },
 
-  /* ---------- testimonials ------------------------------------------------ */
+  /* ---------- testimonials ------------------------------------------------
+     ⚠ PLACEHOLDER QUOTES — replace the text, name and role with real ones
+       before this goes live, or empty `items` to hide the section.
+     ---------------------------------------------------------------------- */
   testimonials: {
     chip: "Testimonials",
     chipIcon: "star",
     title: "What Clients *Say*",
-    intro:
-      "Founders, creative directors and one very patient head of product.",
+    intro: "Add a line from a client, a colleague or a course lead here.",
     items: [
       {
-        text: "We got a logo, a full system and the launch film from one person, and none of it felt bolted together afterwards.",
-        name: "Rosa Marchetti",
-        role: "Founder, Meridian",
+        text: "Quote goes here — what the project was, and what changed after it shipped.",
+        name: "Client name",
+        role: "Role, Company",
       },
       {
-        text: "The only designer I've briefed who sends back a better idea than the one I asked for.",
-        name: "Daniel Okonkwo",
-        role: "Creative Director, Northlight",
+        text: "Quote goes here — something about the guidelines being clear enough to use without you.",
+        name: "Client name",
+        role: "Role, Company",
       },
       {
-        text: "The guidelines are the first ones our team has actually opened twice. The motion rules shipped as tokens, not a PDF.",
-        name: "Saoirse Nolan",
-        role: "Head of Product, Tempo",
+        text: "Quote goes here — a line about working style, turnaround or attention to detail.",
+        name: "Client name",
+        role: "Role, Company",
       },
     ],
   },
 
   /* ---------- closing call to action -------------------------------------- */
   cta: {
-    chip: "Available from September 2026",
+    chip: "Open to onsite & remote opportunities",
     chipIcon: "dot",
     title: "Got a Brand *to Build?*",
-    text: "A rebrand, a single mark, or ninety seconds of film — send a brief, a deck, or three sentences and a deadline.",
+    text: "A full guideline system, a single identity, or a set of layouts — send a brief, a deck, or three sentences and a deadline. Kerala, India · +91 75618 80064.",
     buttonLabel: "", // blank = your email address
     buttonHref: "", // blank = mailto: your email
   },
@@ -526,12 +481,12 @@ window.SITE = {
   /* ---------- footer ------------------------------------------------------- */
   footer: {
     blurb:
-      "Brand identity and motion design. Barcelona, and wherever the render farm is.",
+      "Brand guidelines, visual identity and motion design. Kerala, India — available onsite and remote.",
     columns: [
       { title: "Site", from: "nav" }, // reuses the nav list above
       { title: "Elsewhere", from: "socials" }, // reuses the socials list above
-      { title: "Contact", from: "contact", items: ["Remote worldwide"] },
+      { title: "Contact", from: "contact", items: ["+91 75618 80064", "Onsite & remote"] },
     ],
-    note: "Template. Fictional content.",
+    note: "Brand Guidelines Designer & Visual Designer.",
   },
 };

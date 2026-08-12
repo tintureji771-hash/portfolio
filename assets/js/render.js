@@ -255,8 +255,14 @@
       '<circle cx="' + (w / 2) + '" cy="' + hy + '" r="' + hr + '" fill="none" stroke="#fff" stroke-width="2" opacity=".25"/></svg>';
   }
 
+  // The built-in artwork is always drawn; a photo, when you set one, sits on
+  // top of it. If the file is missing the <img> removes itself and the
+  // artwork shows through — so you can point at a filename before it exists.
   function media(image, alt, fallback) {
-    return image ? '<img src="' + esc(image) + '" alt="' + esc(alt) + '" loading="lazy" decoding="async">' : fallback;
+    if (!image) return fallback;
+    return fallback +
+      '<img class="media-photo" src="' + esc(image) + '" alt="' + esc(alt) + '"' +
+      ' loading="lazy" decoding="async" onerror="this.remove()">';
   }
 
   var P = D.profile || {};
@@ -480,10 +486,9 @@
         return '<span class="swatch" style="background:' + esc(hex) + '" data-hex="' + esc(hex) + '"></span>';
       }).join('');
 
-      var mono = it.image
-        ? '<img src="' + esc(it.image) + '" alt="' + esc(it.name) + ' identity" loading="lazy" decoding="async">'
-        : '<span class="brand-card__grid" aria-hidden="true"></span>' +
-          '<span class="brand-card__mono">' + esc(it.monogram || initials(it.name)) + '</span>';
+      var mono = media(it.image, it.name + ' identity',
+        '<span class="brand-card__grid" aria-hidden="true"></span>' +
+        '<span class="brand-card__mono">' + esc(it.monogram || initials(it.name)) + '</span>');
 
       return '<article class="card card--hover brand-card" data-reveal' + delay(i, 60) + '>' +
         '<div class="brand-card__mark" style="--mark-bg:' + esc(it.color || '#1b1815') +
@@ -497,6 +502,11 @@
         (it.note ? '<p class="brand-card__note">' + esc(it.note) + '</p>' : '') +
         (it.type ? '<p class="brand-card__type"><b>' + esc(it.type) + '</b>' +
           (it.typeNote ? '<span>' + esc(it.typeNote) + '</span>' : '') + '</p>' : '') +
+        // `href` is optional — add one and the card gets a link out to the case study.
+        (it.href ? '<p class="brand-card__link"><a class="link-u" href="' + esc(it.href) + '"' +
+          (/^https?:/.test(it.href) ? ' target="_blank" rel="noopener"' : '') + '>' +
+          esc(it.linkLabel || 'View project') +
+          '<span aria-hidden="true">' + icon('arrow', { w: 10 }) + '</span></a></p>' : '') +
         '</div></article>';
     }).join(''));
 
