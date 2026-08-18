@@ -23,7 +23,7 @@ window.SITE = {
   /* ---------- browser tab, search results, social previews ------------- */
   meta: {
     lang: "en",
-    title: "Tintu C Reji — Brand Guidelines & Visual Designer",
+    title: "Tintu C Reji | Brand Guidelines & Visual Designer",
     description:
       "Tintu C Reji is a brand guidelines designer and visual designer based in Kerala, India — brand identity systems, guideline documents, editorial layout and motion graphics.",
     ogTitle: "", // blank = reuse title
@@ -39,7 +39,7 @@ window.SITE = {
     name: "Tintu C Reji",
     initials: "TR", // the little logo mark; blank = auto
     role: "Brand Guidelines Designer · Visual Designer",
-    email: "tintureji@gmail.com",
+    email: "tintucreji@gmail.com",
     location: "Kerala, India — IST",
   },
 
@@ -63,7 +63,7 @@ window.SITE = {
   socials: [
     { label: "Behance", icon: "behance", href: "https://www.behance.net/tintucreji" },
     { label: "LinkedIn", icon: "linkedin", href: "https://www.linkedin.com/in/tintu-reji/" },
-    { label: "Email", icon: "mail", href: "mailto:tintureji@gmail.com" },
+    { label: "Email", icon: "mail", href: "mailto:tintucreji@gmail.com" },
   ],
 
   /* ---------- hero ------------------------------------------------------ */
@@ -106,10 +106,27 @@ window.SITE = {
      Paste a Vimeo/YouTube embed URL or an .mp4 path into `embed` and the
      modal plays it. Left blank for now — the section still shows.
      ---------------------------------------------------------------------- */
-  reel: {
-    chip: "Watch — Nizhalattam",
+  // reel: {
+  //   chip: "Watch — Nizhalattam",
+  //   chipIcon: "play",
+  //   title: "A Documentary on *Shadow Puppetry*",
+  //   intro:
+  //     "Nizhalattam — title identity and animated title sequence for a documentary on traditional shadow puppetry, from concept development through to final execution.",
+  //   // Vimeo/YouTube *embed* URL or an .mp4 path.
+  //   //   • must be the /embed/ form — a youtu.be or /watch?v= link will not
+  //   //     load in an iframe, YouTube blocks it
+  //   //   • autoplay=1 starts it when the modal opens, rel=0 keeps the
+  //   //     end-screen suggestions to this channel
+  //   embed: "https://www.youtube.com/embed/xu-XLWYgO-g?autoplay=1&rel=0",
+  //   meta: [
+  //     "Title Design · Motion Graphics",
+  //     "After Effects · Premiere Pro · Illustrator",
+  //   ],
+  // },
+reel: {
+    chip: "Wanna Know About Me?",
     chipIcon: "play",
-    title: "A Documentary on *Shadow Puppetry*",
+    title: "My Show Reel",
     intro:
       "Nizhalattam — title identity and animated title sequence for a documentary on traditional shadow puppetry, from concept development through to final execution.",
     // Vimeo/YouTube *embed* URL or an .mp4 path.
@@ -117,12 +134,15 @@ window.SITE = {
     //     load in an iframe, YouTube blocks it
     //   • autoplay=1 starts it when the modal opens, rel=0 keeps the
     //     end-screen suggestions to this channel
-    embed: "https://www.youtube.com/embed/xu-XLWYgO-g?autoplay=1&rel=0",
+    embed: "https://www.youtube.com/embed/uQ_ZyeVOO8s?si=h1VpoS_69fRMtV_v&autoplay=1&rel=0",
+    // YouTube thumbnail
+  // thumbnail: "https://img.youtube.com/vi/v=uQ_ZyeVOO8s/maxresdefault.jpg",
     meta: [
       "Title Design · Motion Graphics",
       "After Effects · Premiere Pro · Illustrator",
     ],
   },
+  // <iframe width="560" height="315" src="https://www.youtube.com/embed/uQ_ZyeVOO8s?si=h1VpoS_69fRMtV_v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
   /* ---------- portfolio grid --------------------------------------------
      The filter buttons build themselves from the `category` values below,
@@ -148,7 +168,7 @@ window.SITE = {
         cta: "View on Behance",
         // Save the file into assets/img/ — until it exists you just see the
         // built-in artwork, no broken image.
-        image: "assets/img/green-square-cover.jpg",
+        image: "assets/img/Slide_2.png",
       },
       {
         name: "Green Square — Packaging & Applications",
@@ -157,7 +177,7 @@ window.SITE = {
         art: "stationery",
         href: "https://www.behance.net/gallery/252894607/Brand-Book-Green-Square",
         cta: "View on Behance",
-        image: "assets/img/green-square-packaging.jpg",
+        image: "assets/img/package.png",
       },
       {
         name: "Green Square — Colour & Type System",
@@ -166,7 +186,7 @@ window.SITE = {
         art: "palette",
         href: "https://www.behance.net/gallery/252894607/Brand-Book-Green-Square",
         cta: "View on Behance",
-        image: "assets/img/green-square-palette.jpg",
+        image: "assets/img/Colors_slide.gif",
       },
       {
         name: "Reelz — Film Magazine",
@@ -175,7 +195,7 @@ window.SITE = {
         art: "wordmark",
         href: "https://www.behance.net/gallery/250105911/Magazine-Project-College-Project",
         cta: "View on Behance",
-        image: "assets/img/reelz-cover.jpg",
+        image: "assets/img/cover.png",
       },
       {
         name: "Nizhalattam — Documentary Titles",
@@ -189,12 +209,22 @@ window.SITE = {
       },
       {
         name: "Branded Video & Multimedia Content",
-        meta: "Motion Graphics — 2024/25",
-        category: "Motion",
+        meta: "Motion Graphics — 2026",
+        category: "Package Design",
         art: "bars",
-        href: "#reel",
-        cta: "Watch",
-        image: "",
+        href: "https://www.youtube.com/shorts/k8PDDhl80SQ",
+        cta: "View on Behance",
+        image: "assets/img/thump for icecream.png",
+      },
+       {
+        name: "Nizhalattam",
+        meta: "A Documentary - Academic",
+        category: "Video Production",
+        art: "bars",
+        href: "https://www.youtube.com/watch?v=2qZ7g7n0p_A",
+        cta: "Watch Now! Behind the scenes of Shadow puppetry",
+        // YouTube serves this thumbnail publicly — no download needed.
+        image: "assets/img/thump for Thumb nail.png",
       },
     ],
   },
@@ -220,7 +250,7 @@ window.SITE = {
         scope: "Brand guidelines · Visual identity",
         monogram: "GS",
         // Set `image` to replace the monogram tile with a real logo shot.
-        image: "assets/img/green-square-mark.jpg",
+        image: "assets/img/Slide_2.png",
         color: "#1f4d2e",
         markColor: "#f5e9d0",
         palette: ["#1f4d2e", "#8bb174", "#f5e9d0", "#c96a3b"],
@@ -235,7 +265,7 @@ window.SITE = {
         year: "Academic project",
         scope: "Film magazine · Editorial design",
         monogram: "RZ",
-        image: "assets/img/reelz-cover.jpg",
+        image: "assets/img/cover.png",
         color: "#1b1815",
         markColor: "#f0a32c",
         palette: ["#1b1815", "#f0a32c", "#f7f2e9", "#6b7f6e"],
@@ -246,6 +276,21 @@ window.SITE = {
         note: "A film-focused magazine — cover design, contents pages, feature layouts, biographical content, film history and awards sections — built on editorial design principles, grid systems, typographic hierarchy and page-to-page visual consistency.",
       },
       {
+        name: "Nizhalattam",
+        year: "Academic project",
+        scope: "Title identity · Motion",
+        monogram: "NZ",
+        image: "https://img.youtube.com/vi/xu-XLWYgO-g/maxresdefault.jpg",
+        color: "#2f2418",
+        markColor: "#e5d3b3",
+        palette: ["#2f2418", "#e5d3b3", "#c96a3b", "#8a9a7b"],
+        type: "Cultural display type",
+        typeNote: "Documentary titles",
+        href: "https://youtu.be/xu-XLWYgO-g",
+        linkLabel: "Watch on YouTube",
+        note: "Title identity and animated title sequence for a documentary on traditional shadow puppetry — cultural references, typography, motion and composition carried from concept development through to final execution.",
+      },
+       {
         name: "Nizhalattam",
         year: "Academic project",
         scope: "Title identity · Motion",
