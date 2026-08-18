@@ -73,7 +73,7 @@ window.SITE = {
     heading: "I'm *Tintu C Reji*",
     intro:
       "I design brand identities and the guideline systems that keep them consistent — logo usage, clear space, colour, typography and layout rules documented so any team can apply them without me in the room.",
-    image: "", // e.g. 'assets/img/portrait.jpg'
+    image: "assets/img/photonn.png", // e.g. 'assets/img/portrait.jpg'
     floats: ["Brand Guidelines", "Identity Systems", "Editorial Layout", "Motion Graphics"],
     seal: "Brand Guidelines · Visual Identity · Systems", // '' removes the spinning badge
     buttons: [
@@ -135,8 +135,6 @@ reel: {
     //   • autoplay=1 starts it when the modal opens, rel=0 keeps the
     //     end-screen suggestions to this channel
     embed: "https://www.youtube.com/embed/uQ_ZyeVOO8s?si=h1VpoS_69fRMtV_v&autoplay=1&rel=0",
-    // YouTube thumbnail
-  // thumbnail: "https://img.youtube.com/vi/v=uQ_ZyeVOO8s/maxresdefault.jpg",
     meta: [
       "Title Design · Motion Graphics",
       "After Effects · Premiere Pro · Illustrator",
@@ -323,7 +321,7 @@ reel: {
     chip: "About Me",
     chipIcon: "dot",
     title: "Who is *Tintu C Reji?*",
-    image: "", // e.g. 'assets/img/about.jpg'
+    image: "assets/img/photonn.png", // e.g. 'assets/img/about.jpg'
     paragraphs: [
       "I'm a detail-oriented brand and visual designer currently working as a freelancer, with over two years of combined industry and academic experience across brand identity, brand guidelines, visual communication, motion graphics, editorial layout and multimedia design.",
       "Most of my work is translating brand concepts into structured visual systems — comprehensive guideline documents, presentation layouts, digital assets and branded applications across multiple touchpoints. Typography, visual hierarchy, layout systems and brand consistency are the parts I care about most. Illustrator, Photoshop, After Effects and Premiere Pro daily, with InDesign and Figma alongside them.",

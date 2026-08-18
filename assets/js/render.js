@@ -413,6 +413,24 @@
     if (btn) {
       btn.setAttribute('aria-label', 'Play ' + (r.chip || 'showreel'));
       if (r.embed) btn.setAttribute('data-embed', r.embed);
+      
+      // Extract video ID from YouTube embed URL and generate thumbnail
+      if (r.embed) {
+        var videoIdMatch = r.embed.match(/\/embed\/([^?]+)/);
+        if (videoIdMatch && videoIdMatch[1]) {
+          var videoId = videoIdMatch[1];
+          var thumbnailUrl = 'https://img.youtube.com/vi/' + videoId + '/maxresdefault.jpg';
+          
+          var svg = btn.querySelector('.reel__bg');
+          if (svg) svg.remove();
+          var img = document.createElement('img');
+          img.src = thumbnailUrl;
+          img.style.cssText = 'width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;z-index:1;';
+          img.setAttribute('alt', '');
+          img.setAttribute('aria-hidden', 'true');
+          btn.insertBefore(img, btn.firstChild);
+        }
+      }
     }
     fill('#reelMeta', (r.meta || []).map(function (m) { return '<span>' + esc(m) + '</span>'; }).join(''));
 

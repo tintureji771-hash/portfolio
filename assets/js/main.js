@@ -363,82 +363,41 @@
   }
 
   /* ------------------------------------------------------------------ *
-   * Showreel modal — focus-trapped, Escape to close, embed injected on
-   * open and torn down on close so the video can't keep playing.
+   * Showreel — plays video inline when clicked
    * ------------------------------------------------------------------ */
   function initReel() {
     var trigger = $('#reelBtn');
-    var modal = $('#reelModal');
-    var frame = $('#reelFrame');
-    var closeBtn = $('#reelClose');
-    if (!trigger || !modal || !frame) return;
+    if (!trigger) return;
 
-    var placeholder = frame.innerHTML;
-    var lastFocus = null;
+    var isPlaying = false;
 
-    function open() {
-      lastFocus = document.activeElement;
+    trigger.addEventListener('click', function () {
+      if (isPlaying) return;
+      isPlaying = true;
 
-      // Set data-embed on #reelBtn to a video URL and it gets embedded here.
       var src = trigger.getAttribute('data-embed');
       if (src) {
-        frame.innerHTML = '';
-        var node;
-        if (/\.(mp4|webm|mov)(\?|$)/i.test(src)) {
-          node = document.createElement('video');
-          node.src = src;
-          node.controls = true;
-          node.autoplay = true;
-          node.playsInline = true;
-        } else {
-          node = document.createElement('iframe');
-          node.src = src;
-          node.allow = 'autoplay; fullscreen; picture-in-picture';
-          node.setAttribute('allowfullscreen', '');
-          node.title = 'Showreel 2026';
-        }
-        frame.appendChild(node);
-      }
+        // Get the play button and gradient overlay
+        var playBtn = trigger.querySelector('.reel__play');
+        var meta = trigger.querySelector('.reel__meta');
+        
+        // Hide play button and metadata
+        if (playBtn) playBtn.style.display = 'none';
+        if (meta) meta.style.display = 'none';
 
-      modal.classList.add('is-open');
-      modal.setAttribute('aria-hidden', 'false');
-      document.body.classList.add('is-locked');
-      if (closeBtn) closeBtn.focus();
-    }
+        // Ensure thumbnail image stays visible
+        var img = trigger.querySelector('img');
+        if (img) img.style.zIndex = '1';
 
-    function close() {
-      modal.classList.remove('is-open');
-      modal.setAttribute('aria-hidden', 'true');
-      document.body.classList.remove('is-locked');
-      // Restore the placeholder — this also stops playback.
-      window.setTimeout(function () { frame.innerHTML = placeholder; }, 400);
-      if (lastFocus && lastFocus.focus) lastFocus.focus();
-    }
-
-    trigger.addEventListener('click', open);
-    if (closeBtn) closeBtn.addEventListener('click', close);
-
-    // Click the backdrop (but not the video) to dismiss.
-    modal.addEventListener('click', function (e) {
-      if (e.target === modal) close();
-    });
-
-    document.addEventListener('keydown', function (e) {
-      if (!modal.classList.contains('is-open')) return;
-
-      if (e.key === 'Escape') { close(); return; }
-
-      // Keep focus inside the dialog while it's open.
-      if (e.key === 'Tab') {
-        var focusable = $$('button, a[href], iframe, video, [tabindex]:not([tabindex="-1"])', modal);
-        if (!focusable.length) return;
-        var first = focusable[0];
-        var last = focusable[focusable.length - 1];
-        if (e.shiftKey && document.activeElement === first) {
-          e.preventDefault(); last.focus();
-        } else if (!e.shiftKey && document.activeElement === last) {
-          e.preventDefault(); first.focus();
-        }
+        // Create and inject iframe
+        var iframe = document.createElement('iframe');
+        iframe.src = src + '&autoplay=1';
+        iframe.style.cssText = 'width:100%;height:100%;border:0;position:absolute;top:0;left:0;z-index:5;border-radius:inherit;';
+        iframe.allow = 'autoplay; fullscreen; picture-in-picture';
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.title = 'Showreel video';
+        
+        trigger.appendChild(iframe);
       }
     });
   }
