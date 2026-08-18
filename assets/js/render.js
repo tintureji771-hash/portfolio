@@ -659,7 +659,7 @@
     fill('#processGrid', p.steps.map(function (s, i) {
       return '<article class="card card--hover" data-reveal' + delay(i, 60) + '>' +
         '<span class="step__num">' + String(i + 1).padStart(2, '0') + '</span>' +
-        '<h3 class="step__title">' + esc(s.title) + '</h3><p>' + esc(s.text) + '</p></article>';
+        '<h3 class="step__title">' + esc(s.title) + '</h3><p class="step__text">' + esc(s.text) + '</p></article>';
     }).join(''));
   }
 
